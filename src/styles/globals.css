@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&family=Open+Sans:wght@300;400;500&family=Roboto:wght@300;400;500;700&display=swap');
+
+@font-face {
+     font-family: apple-sd;
+     src: url('../../public/fonts/Apple-SD-Gothic-Neo-Bold.ttf');
+}
+.font-apple-sd{
+     font-family: apple-sd, 'Inter';
+}
+.font-inter{
+     font-family: 'Inter', sans-serif;
+}
+.font-roboto{
+     font-family: 'Roboto', sans-serif;
+}
+
+
+
+
+  
