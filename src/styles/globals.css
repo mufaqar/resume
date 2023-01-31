@@ -5,6 +5,14 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&family=Open+Sans:wght@300;400;500&family=Roboto:wght@300;400;500;700&display=swap');
 
+@layer components{
+     .input{
+          @apply  mt-2 text-gray-900 border-none text-lg outline-none ring-0 focus:ring-0 rounded-[3px] bg-[#EFF2F9]  block w-full p-[14px] placeholder:text-lg
+     }
+}
+
+
+
 @font-face {
      font-family: apple-sd;
      src: url('../../public/fonts/Apple-SD-Gothic-Neo-Bold.ttf');
