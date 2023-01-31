@@ -1,8 +1,11 @@
+import HomeBanner from '@/components/homeBanner'
 import React from 'react'
 
 const HomeModule = () => {
   return (
-    <div>HomeModule</div>
+    <>
+    <HomeBanner />
+    </>
   )
 }
 
