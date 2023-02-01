@@ -77,10 +77,19 @@ max-width: 576px;
 -ms-overflow-style: none;  /* IE and Edge */
 scrollbar-width: none;  /* Firefox */
 }
-
-
-
-
+.reviewcard .card:nth-child(odd){
+     border-bottom: 1px solid #E5E7EB;
+     border-right: 1px solid #E5E7EB;
+}
+.reviewcard .card:nth-child(even){
+     border-bottom: 1px solid #E5E7EB;
+}
+.reviewcard .card:nth-child(3){
+     border-bottom: 1px solid transparent;
+}
+.reviewcard .card:last-child{
+     border-bottom: 1px solid transparent;
+}
 
 
 /* media queries  */
