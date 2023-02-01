@@ -60,4 +60,33 @@
      position: relative !important;
      height: unset !important;
 }
-  
+.ReactModalPortal>div{
+     background-color: rgb(15 15 15 / 48%) !important;
+}
+.ReactModalPortal>div>div{
+max-width: 576px;
+    width: 100%;
+}
+
+.ReactModalPortal>div>div::-webkit-scrollbar {
+     display: none;
+}
+   
+/* Hide scrollbar for IE, Edge and Firefox */
+.ReactModalPortal>div>div {
+-ms-overflow-style: none;  /* IE and Edge */
+scrollbar-width: none;  /* Firefox */
+}
+
+
+
+
+
+
+/* media queries  */
+@media (max-height: 900px){
+     .ReactModalPortal>div>div{
+          max-height: 600px !important;
+          height: 100% !important;
+     }
+}
