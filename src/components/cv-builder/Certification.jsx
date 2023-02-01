@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { Label, RitchEditor, SubTitle, Text } from "@/components/imports";
+import { Label, SubTitle, Text } from "@/components/imports";
 import { BsPlusLg } from "react-icons/bs";
 
-const EmploymentHistory = () => {
+const Certification = () => {
   const [empTab, setEmpTab] = useState(null);
   
   const HandleEmpTab = (id) => {
@@ -14,15 +14,9 @@ const EmploymentHistory = () => {
 
   return (
     <>
-      <SubTitle className="mt-[42px]">Employment History</SubTitle>
-      <Text className="mt-1 mb-1">
-        Show your relevant experience (last 10 years). Use bullet points to note
-        your achievements, if possible - use numbers/facts (Achieved X, measured
-        by Y, by doing Z).
-      </Text>
-
+      <SubTitle className="mt-[42px]">Certification</SubTitle>
       <div id="accordion-collapse" className="mt-4" data-accordion="collapse">
-        {[1, 2, 3].map((item, i) => {
+        {[1].map((item, i) => {
           return (
             <div className="mt-4" key={i}>
               <button
@@ -34,9 +28,9 @@ const EmploymentHistory = () => {
               >
                 <div className="flex flex-col">
                   <span className="text-sm font-semibold text-gray-800">
-                    Sales Management Assistant at Google
+                  Distribution Manager - Level 2 at Korea Chamber of Commerce and Industry
                   </span>
-                  <Label>Feb 2014 - Jan 2017</Label>
+                  <Label>Feb 2022</Label>
                 </div>
                 <svg
                   data-accordion-icon
@@ -59,19 +53,9 @@ const EmploymentHistory = () => {
               >
                 <div class="p-5 font-light border border-t-0 border-gray-200 ">
                   <form>
-                    <div class="grid gap-3 md:gap-x-5 md:gap-y-4 lg:gap-x-10 lg:gap-y-8 mb-6 md:grid-cols-2 mt-[22px]">
+                    <div class="grid gap-3 md:gap-x-5 md:gap-y-4 lg:gap-x-10 lg:gap-y-8 mb-6 mt-[22px]">
                       <div>
-                        <Label>Job Title</Label>
-                        <input
-                          type="text"
-                          id="first_name"
-                          className="input"
-                          placeholder=""
-                          required
-                        />
-                      </div>
-                      <div>
-                        <Label>Employer</Label>
+                        <Label>Title</Label>
                         <input
                           type="text"
                           id="first_name"
@@ -82,7 +66,7 @@ const EmploymentHistory = () => {
                       </div>
                       <div className="grid grid-cols-2 gap-3 items-end">
                         <div>
-                          <Label>Start & End Date</Label>
+                          <Label>Date</Label>
                           <input
                             type="text"
                             id="first_name"
@@ -91,32 +75,11 @@ const EmploymentHistory = () => {
                             required
                           />
                         </div>
-                        <div>
-                          <input
-                            type="text"
-                            id="first_name"
-                            className="input"
-                            placeholder=""
-                            required
-                          />
-                        </div>
-                      </div>
-                      <div>
-                        <Label>City</Label>
-                        <input
-                          type="text"
-                          id="first_name"
-                          className="input"
-                          placeholder=""
-                          required
-                        />
                       </div>
                     </div>
                   </form>
-                 <div className="mb-2"> <Label>Description</Label></div>
-                  <RitchEditor/>
-                  <Label className="font-light block pt-2">Recruiter tip: write 200+ characters to increase interview chances</Label>
-                </div>
+                
+              </div> 
               </div>
             </div>
           );
@@ -125,10 +88,10 @@ const EmploymentHistory = () => {
 
       <button className="text-sm font-semibold mt-6 px-5 text-[#1A91F0] font-roboto flex items-center gap-2">
         <BsPlusLg size={12} />
-        Add one more employment
+        Add one more course
       </button>
     </>
   );
 };
 
-export default EmploymentHistory;
+export default Certification;

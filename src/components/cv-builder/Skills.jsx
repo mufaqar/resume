@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { Label, RitchEditor, SubTitle, Text } from "@/components/imports";
+import { Label, SubTitle, Text } from "@/components/imports";
 import { BsPlusLg } from "react-icons/bs";
 
-const EmploymentHistory = () => {
+const Skills = () => {
   const [empTab, setEmpTab] = useState(null);
   
   const HandleEmpTab = (id) => {
@@ -14,15 +14,13 @@ const EmploymentHistory = () => {
 
   return (
     <>
-      <SubTitle className="mt-[42px]">Employment History</SubTitle>
+      <SubTitle className="mt-[42px]">Skills</SubTitle>
       <Text className="mt-1 mb-1">
-        Show your relevant experience (last 10 years). Use bullet points to note
-        your achievements, if possible - use numbers/facts (Achieved X, measured
-        by Y, by doing Z).
+      Choose 5 of the most important skills to show your talents! Make sure they match the keywords of the job listing if applying via an online system.
       </Text>
 
       <div id="accordion-collapse" className="mt-4" data-accordion="collapse">
-        {[1, 2, 3].map((item, i) => {
+        {[1].map((item, i) => {
           return (
             <div className="mt-4" key={i}>
               <button
@@ -34,9 +32,9 @@ const EmploymentHistory = () => {
               >
                 <div className="flex flex-col">
                   <span className="text-sm font-semibold text-gray-800">
-                    Sales Management Assistant at Google
+                  HubSpot Sales, Pipedrive & Salesforce
                   </span>
-                  <Label>Feb 2014 - Jan 2017</Label>
+                  <Label>Expert</Label>
                 </div>
                 <svg
                   data-accordion-icon
@@ -61,7 +59,7 @@ const EmploymentHistory = () => {
                   <form>
                     <div class="grid gap-3 md:gap-x-5 md:gap-y-4 lg:gap-x-10 lg:gap-y-8 mb-6 md:grid-cols-2 mt-[22px]">
                       <div>
-                        <Label>Job Title</Label>
+                        <Label>Skill</Label>
                         <input
                           type="text"
                           id="first_name"
@@ -71,52 +69,18 @@ const EmploymentHistory = () => {
                         />
                       </div>
                       <div>
-                        <Label>Employer</Label>
-                        <input
-                          type="text"
-                          id="first_name"
-                          className="input"
-                          placeholder=""
-                          required
-                        />
-                      </div>
-                      <div className="grid grid-cols-2 gap-3 items-end">
-                        <div>
-                          <Label>Start & End Date</Label>
-                          <input
-                            type="text"
-                            id="first_name"
-                            className="input"
-                            placeholder=""
-                            required
-                          />
-                        </div>
-                        <div>
-                          <input
-                            type="text"
-                            id="first_name"
-                            className="input"
-                            placeholder=""
-                            required
-                          />
-                        </div>
-                      </div>
-                      <div>
-                        <Label>City</Label>
-                        <input
-                          type="text"
-                          id="first_name"
-                          className="input"
-                          placeholder=""
-                          required
-                        />
+                        <Label>Type</Label>
+                        <select id="countries" class="border input">
+                        <option selected>Choose a Type</option>
+                        <option value="FR">Beginner</option>
+                        <option value="US">Intermediate</option>
+                        <option value="CA">Expert</option>
+                      </select>
                       </div>
                     </div>
                   </form>
-                 <div className="mb-2"> <Label>Description</Label></div>
-                  <RitchEditor/>
-                  <Label className="font-light block pt-2">Recruiter tip: write 200+ characters to increase interview chances</Label>
-                </div>
+                
+              </div> 
               </div>
             </div>
           );
@@ -125,10 +89,10 @@ const EmploymentHistory = () => {
 
       <button className="text-sm font-semibold mt-6 px-5 text-[#1A91F0] font-roboto flex items-center gap-2">
         <BsPlusLg size={12} />
-        Add one more employment
+        Add one more skill
       </button>
     </>
   );
 };
 
-export default EmploymentHistory;
+export default Skills;

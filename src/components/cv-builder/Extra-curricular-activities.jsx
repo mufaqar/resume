@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Label, RitchEditor, SubTitle, Text } from "@/components/imports";
 import { BsPlusLg } from "react-icons/bs";
 
-const EmploymentHistory = () => {
+const ExtraCurricularActivities = () => {
   const [empTab, setEmpTab] = useState(null);
   
   const HandleEmpTab = (id) => {
@@ -14,12 +14,7 @@ const EmploymentHistory = () => {
 
   return (
     <>
-      <SubTitle className="mt-[42px]">Employment History</SubTitle>
-      <Text className="mt-1 mb-1">
-        Show your relevant experience (last 10 years). Use bullet points to note
-        your achievements, if possible - use numbers/facts (Achieved X, measured
-        by Y, by doing Z).
-      </Text>
+      <SubTitle className="mt-[42px]">Extra-curricular Activities</SubTitle>
 
       <div id="accordion-collapse" className="mt-4" data-accordion="collapse">
         {[1, 2, 3].map((item, i) => {
@@ -34,7 +29,7 @@ const EmploymentHistory = () => {
               >
                 <div className="flex flex-col">
                   <span className="text-sm font-semibold text-gray-800">
-                    Sales Management Assistant at Google
+                    Volunteering at Apple
                   </span>
                   <Label>Feb 2014 - Jan 2017</Label>
                 </div>
@@ -125,10 +120,10 @@ const EmploymentHistory = () => {
 
       <button className="text-sm font-semibold mt-6 px-5 text-[#1A91F0] font-roboto flex items-center gap-2">
         <BsPlusLg size={12} />
-        Add one more employment
+        Add one more activity
       </button>
     </>
   );
 };
 
-export default EmploymentHistory;
+export default ExtraCurricularActivities;
