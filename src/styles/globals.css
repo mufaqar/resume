@@ -26,8 +26,27 @@
 .font-roboto{
      font-family: 'Roboto', sans-serif;
 }
-
-
+.ql-toolbar.ql-snow .ql-formats{
+     border-right: 1px solid #BEC4D5;
+     padding-right: 10px;
+}
+.ql-toolbar.ql-snow .ql-formats:last-child{
+     border-right: none;
+}
+.ql-toolbar.ql-snow,
+.ql-container.ql-snow{
+     border: none !important;
+}
+.ql-container.ql-snow{
+     padding: 0px 1rem;
+     font-size: 19px;
+     color: #1E2532;
+     letter-spacing: 1px;
+     font-weight: 300;
+}
+.ql-container{
+ height: 200px !important
+}
 
 
   
