@@ -10,8 +10,8 @@ import Feature3 from '../../public/images/about3.png';
 const AboutUsModule = () => {
   return (
     <>
-      <section className="bg-gradient-to-r from-[#EBFAFF] via-white to-white">
-        <div className="py-8 px-4 text-center lg:py-16 lg:px-6 max-w-screen-xl mx-auto">
+      <section className=" bg-[url('/images/about_bg.png')] bg-right bg-no-repeat bg-contain">
+        <div className="py-8 px-4 text-center lg:py-16 lg:px-6 max-w-screen-xl mx-auto ">
           <div className="mx-auto max-w-screen-sm">
             <h2 className="mb-4 md:text-4xl text-3xl tracking-tight font-extrabold text-gray-900">
               ATS 친화 레쥬메 제작

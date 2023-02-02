@@ -1,12 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import Home_bg from '../../public/images/home1.png';
-import circleBg from '../../public/images/circleBg.png'
+import Home_bg from '../../public/images/home_bg.png';
 
 export default function HomeBanner() {
     return (
-        <section className="relative bg-white">
+        <section className="relative bg-white ">
             <div className="grid py-8 lg:gap-8 xl:gap-0 lg:py-4 lg:grid-cols-12 px-4 max-w-screen-xl mx-auto">
                 <div className="mr-auto place-self-center lg:col-span-7 max-w-[700px]">
                     <span className='bg-[#E1EFFE] py-1 px-3 rounded-[6px] text-[#1E429F] text-lg font-medium'>
@@ -29,9 +28,8 @@ export default function HomeBanner() {
                     </Link>
                 </div>
                 <div className="lg:mt-0 lg:col-span-5 lg:flex">
-                    <Image src={Home_bg} alt="mockup" className="relative z-10" />
+                    <Image src={Home_bg} alt="mockup" className="relative" />
                 </div>
-                <Image src={circleBg} alt="mockup" className="absolute right-0 bottom-0 opacity-20 z-0" />
             </div>
         </section>
     )
