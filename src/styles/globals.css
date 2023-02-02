@@ -91,6 +91,9 @@ scrollbar-width: none;  /* Firefox */
      border-bottom: 1px solid transparent;
 }
 
+h1,h2,h3,h4,h5,h6,p,span,li,a{
+     font-family: 'Inter', sans-serif;
+}
 
 /* media queries  */
 @media (max-height: 900px){
