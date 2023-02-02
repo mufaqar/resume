@@ -3,7 +3,7 @@ import React from 'react'
 
 const ReviewPage = () => {
   return (
-    <div><ReviewModule/></div>
+    <ReviewModule/>
   )
 }
 

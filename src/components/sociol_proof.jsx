@@ -11,7 +11,7 @@ export default function Sociol_proof({title, content, link_txt}) {
        {content}
         </p>
         <Link href="#" className='text-base font-normal text-center'>
-        {link_txt} <span className='text-[#1A56DB]'>*</span>
+        {link_txt}
         </Link>
     </div>
   )

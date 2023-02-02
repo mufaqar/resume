@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import Feature from '../../public/images/feature.png'
+import Feature from '../../public/images/feature.png';
 
 export default function Features() {
     return (

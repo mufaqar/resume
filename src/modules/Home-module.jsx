@@ -25,9 +25,9 @@ const HomeModule = () => {
             </h1>
           </div>
           <div className='grid md:grid-cols-3 grid-cols-1 gap-16 text-center items-center'>
-            <Sociol_proof title=" 2534+" content=" 총 제작 레쥬메" link_txt="2022년 10월 기준" />
-            <Sociol_proof title="12+" content="영미권 원어민 첨삭가" link_txt="미국, 호주, 영국, 캐나다 원어민 " />
-            <Sociol_proof title="23+" content="원서 전문 번역가" link_txt="취업 문서, 유학 문서 전문 " />
+            <Sociol_proof title=" 2534+" content=" 총 제작 레쥬메" link_txt="2022년 10월 기준 *" />
+            <Sociol_proof title="12+" content="영미권 원어민 첨삭가" link_txt="미국, 호주, 영국, 캐나다 원어민 *" />
+            <Sociol_proof title="23+" content="원서 전문 번역가" link_txt="취업 문서, 유학 문서 전문 *" />
           </div>
           <div className=' text-center mt-8'>
             <Link href="#" className='text-sm font-normal text-center'>
