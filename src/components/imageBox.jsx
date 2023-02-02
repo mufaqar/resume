@@ -4,12 +4,12 @@ import React from 'react';
 
 export default function ImageBox({Image_url, title, content, Link_title, Custom_class}) {
     return (
-        <div className={`flex gap-20 items-center flex-col ${Custom_class}`}>
+        <div className={`flex md:gap-20 gap-10 items-center flex-col ${Custom_class}`}>
             <div className='md:w-1/2 w-full'>
                 <Image src={Image_url} alt="" />
             </div>
             <div className='md:w-1/2 w-full'>
-                <h2 className='leading-tight text-4xl font-extrabold mb-6'>
+                <h2 className='leading-tight md:text-4xl text-3xl font-extrabold mb-6'>
                     {title}
                 </h2>
                 <p className='text-lg font-normal mb-6'>

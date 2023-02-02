@@ -9,36 +9,36 @@ export default function Header() {
 
     return (
         <header>
-            <nav className="bg-white border-gray-200 px-4 lg:px-9 py-5 dark:bg-gray-800">
+            <nav className="bg-white border-gray-200 px-4 lg:px-9 py-5 ">
                 <div className="flex flex-wrap justify-between items-center mx-auto">
                     <Link href="/" className="flex items-center">
                         <Image src={Logo} className="mr-11" alt="Logo" onClick={() => setNavbar(false)} />
                     </Link>
-                    <button onClick={() => setNavbar(!navbar)} type="button" className="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu-2" aria-expanded="false">
+                    <button onClick={() => setNavbar(!navbar)} type="button" className="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 " aria-controls="mobile-menu-2" aria-expanded="false">
                         <span className="sr-only">Open main menu</span>
                         <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd"></path></svg>
                         <svg className="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd"></path></svg>
                     </button>
                     <div className="flex items-center lg:order-2 lg:mt-0 mt-2">
-                        <Link href="#" className="text-white bg-[#1A56DB] hover:bg-[#1A56DB] focus:ring-0 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-[#1A56DB] dark:hover:bg-[#1A56DB] focus:outline-none">레쥬메 제작하기</Link>
-                        <Link href="#" className="text-white bg-[#1A56DB] hover:bg-[#1A56DB] focus:ring-0 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 ml-2 dark:bg-[#1A56DB] dark:hover:bg-[#1A56DB] focus:outline-none">취업 번역 서비스</Link>
+                        <Link href="#" className="text-white bg-[#1A56DB] hover:bg-[#1A56DB] focus:ring-0 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none">레쥬메 제작하기</Link>
+                        <Link href="#" className="text-white bg-[#1A56DB] hover:bg-[#1A56DB] focus:ring-0 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 ml-2 focus:outline-none">취업 번역 서비스</Link>
                     </div>
                     <div className={`${navbar ? "" : "hidden"} justify-between items-center w-full lg:flex flex-auto lg:w-auto lg:order-1`}>
                         <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
                             <li>
-                                <Link href="/" onClick={() => setNavbar(false)} className="block py-2 pr-4 pl-3 text-black text-base font-medium dark:text-white" aria-current="page">Home</Link>
+                                <Link href="/" onClick={() => setNavbar(false)} className="block py-2 pr-4 pl-3 text-black text-base font-medium " aria-current="page">Home</Link>
                             </li>
                             <li>
-                                <Link href="resume-builder" onClick={() => setNavbar(false)} className="block py-2 pr-4 pl-3 text-black text-base font-medium dark:text-white">Create Resume</Link>
+                                <Link href="resume-builder" onClick={() => setNavbar(false)} className="block py-2 pr-4 pl-3 text-black text-base font-medium ">Create Resume</Link>
                             </li>
                             <li>
-                                <Link href="review" onClick={() => setNavbar(false)} className="block py-2 pr-4 pl-3 text-black text-base font-medium dark:text-white">Reviews</Link>
+                                <Link href="review" onClick={() => setNavbar(false)} className="block py-2 pr-4 pl-3 text-black text-base font-medium ">Reviews</Link>
                             </li>
                             <li>
-                                <Link href="about-us" onClick={() => setNavbar(false)} className="block py-2 pr-4 pl-3 text-black text-base font-medium dark:text-white">About us</Link>
+                                <Link href="about-us" onClick={() => setNavbar(false)} className="block py-2 pr-4 pl-3 text-black text-base font-medium ">About us</Link>
                             </li>
                             <li>
-                                <Link href="#" onClick={() => setNavbar(false)} className="block py-2 pr-4 pl-3 text-black text-base font-medium dark:text-white">Contact</Link>
+                                <Link href="#" onClick={() => setNavbar(false)} className="block py-2 pr-4 pl-3 text-black text-base font-medium ">Contact</Link>
                             </li>
                         </ul>
                     </div>

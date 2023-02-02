@@ -7,16 +7,16 @@ import circleBg from '../../public/images/circleBg.png'
 export default function HomeBanner() {
     return (
         <section className="relative bg-white">
-            <div className="grid px-20 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-4 lg:grid-cols-12">
+            <div className="grid py-8 lg:gap-8 xl:gap-0 lg:py-4 lg:grid-cols-12 px-4 max-w-screen-xl mx-auto">
                 <div className="mr-auto place-self-center lg:col-span-7 max-w-[700px]">
                     <span className='bg-[#E1EFFE] py-1 px-3 rounded-[6px] text-[#1E429F] text-lg font-medium'>
                         ATS Friendly Resume Service
                     </span>
-                    <h1 className="text-5xl leading-[60px] font-extrabold mt-11">
+                    <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl mt-11">
                         자체 구현 ATS와 전문 첨삭가가
                         <span className='text-[#1A56DB] '>공고 FIT 레쥬메</span>를 제작합니다
                     </h1>
-                    <p className="text-xl leading-7 font-normal mt-6 mb-10">
+                    <p className="max-w-2xl font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl mt-6 mb-10">
                         취업 전문 원어민 첨삭가, 자체 구현 ATS 기술로
                         중복률 0%, 100% 여러분만의 공고 맞춤 영어 이력서를 완성합니다.
                     </p>

@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 import Feature from '../../public/images/feature.png'
 
@@ -6,12 +7,12 @@ export default function Features() {
     return (
         <section className="bg-white">
             <div
-                className="gap-8 items-center py-8 px-4 mx-auto lg:grid lg:grid-cols-2 xl:gap-16 sm:py-16 lg:px-6 ">
+                className="gap-8 items-center py-8 px-4 lg:grid lg:grid-cols-2 xl:gap-16 sm:py-16 lg:px-6 max-w-screen-xl mx-auto">
                 <Image className="mb-4 w-full lg:mb-0 rounded-lg"
                     src={Feature}
                     alt="feature image" />
                 <div className="">
-                    <h2 className="leading-tight text-4xl font-extrabold">
+                    <h2 className="leading-tight md:text-4xl text-3xl font-extrabold">
                         ATS 친화형 레쥬메를 제작 해야 하는 이유
                     </h2>
                     <p className="mb-8 text-gray-500 text-xl font-normal">
@@ -35,7 +36,7 @@ export default function Features() {
                                 <p className="mb-2 font-light text-gray-500">
                                     평균적으로 각 외국계 회사 채용 공고에 250명의 지원자가 있으며, 때로는 수천 명 이상이 되기도 합니다. 이지레쥬메는 지원자의 이력서가 수많은 지원자 속에서 돋보이도록 ATS & 휴먼 맞춤형 레쥬메를 제작합니다.
                                 </p>
-                                <a href="#"
+                                <Link href="#"
                                     className="inline-flex items-center text-[#1C64F2]">
                                     Learn more
                                     <svg className="ml-1 w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
@@ -44,7 +45,7 @@ export default function Features() {
                                             d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
                                             clipRule="evenodd"></path>
                                     </svg>
-                                </a>
+                                </Link>
                             </div>
                         </div>
                         <div className="flex pt-8">
@@ -64,7 +65,7 @@ export default function Features() {
                                 <p className="mb-2 font-light text-gray-500">
                                     연구에 따르면 지원자의 이력서 중 약 75%가 ATS 데이터베이스에 의해 걸러져 담담자에게 전달되지 않습니다. 이것이 바로 ATS 친화형 레쥬메를 제작해야 하는 이유입니다.
                                 </p>
-                                <a href="#"
+                                <Link href="#"
                                     className="inline-flex items-center text-[#1C64F2]">
                                     Learn more
                                     <svg className="ml-1 w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
@@ -73,7 +74,7 @@ export default function Features() {
                                             d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
                                             clipRule="evenodd"></path>
                                     </svg>
-                                </a>
+                                </Link>
                             </div>
                         </div>
                         <div className="flex pt-8">
@@ -93,7 +94,7 @@ export default function Features() {
                                 <p className="mb-2 font-light text-gray-500">
                                     프로그램은 인공지능이 이해합니다. 이지레쥬메는 AI NLP 기술로 공고를 분석하고 최적의 Summary를 제작합니다. 이후 전문 첨삭가가 채용 담당자의 입장에서 손수 이력서를 제작하여 AI, 휴먼 모두 선호할 수 있는 레쥬메를 제작합니다.
                                 </p>
-                                <a href="#"
+                                <Link href="#"
                                     className="inline-flex items-center text-[#1C64F2]">
                                     Learn more
                                     <svg className="ml-1 w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
@@ -102,7 +103,7 @@ export default function Features() {
                                             d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
                                             clipRule="evenodd"></path>
                                     </svg>
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>

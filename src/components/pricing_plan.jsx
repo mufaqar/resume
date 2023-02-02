@@ -4,9 +4,9 @@ import React from 'react'
 export default function Pricing_plan() {
     return (
         <section className="bg-white items-center">
-            <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+            <div className="py-8 px-4 sm:py-16 lg:px-6 max-w-screen-xl mx-auto">
                 <div className="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
-                    <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 ">
+                    <h2 className="mb-4 md:text-4xl text-3xl tracking-tight font-extrabold text-gray-900 ">
                         이지레쥬메 전문 서비스
                     </h2>
                     <p className="mb-5 font-light text-gray-500 sm:text-xl ">
