@@ -22,7 +22,7 @@ export default function Pricing_plan() {
                         <p className="mt-4 mb-1 text-gray-500 text-light ">원서 전문 번역가와 원어민이 제작합니다.
                         </p>
                         <Link href="#"
-                            className="inline-flex justify-center items-center font-medium text-[#1C64F2]">
+                            className="inline-flex justify-center items-center font-medium text-blue-700">
                            현재 30000원 할인 가능
                             <svg className="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -84,7 +84,7 @@ export default function Pricing_plan() {
                         className="flex flex-col p-6 mx-auto max-w-xl text-center bg-white rounded-lg border shadow xl:max-w-lg border-[#1A56DB] xl:p-8">
                         <div className="mb-2">
                             <span
-                                className="py-1 px-3 text-sm text-[#1E429F] bg-[#E1EFFE] rounded ">Most
+                                className="py-1 px-3 text-sm text-blue-700 bg-[#E1EFFE] rounded ">Most
                                 popular</span>
                         </div>
                         <h3 className="mb-4 text-2xl font-medium text-gray-900 ">영어 이력서 + 커버레터</h3>
@@ -92,7 +92,7 @@ export default function Pricing_plan() {
                         <p className="mt-4 mb-1 text-gray-500 text-light">원서 전문 번역가와 원어민이 제작합니다.
                         </p>
                         <Link href="#"
-                            className="inline-flex justify-center items-center font-medium text-[#1C64F2]">
+                            className="inline-flex justify-center items-center font-medium text-blue-700">
                             현재 30000원 할인 가능
                             <svg className="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -102,7 +102,7 @@ export default function Pricing_plan() {
                             </svg>
                         </Link>
                         <Link href="#"
-                            className="text-white bg-blue-700 focus:ring-none font-medium rounded-lg text-sm px-5 py-2.5 text-center my-8">
+                            className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-none font-medium rounded-lg text-sm px-5 py-2.5 text-center my-8">
                                 신청하기
                             </Link>
                         <ul role="list" className="space-y-4 text-left text-gray-900">
@@ -167,7 +167,7 @@ export default function Pricing_plan() {
                         <p className="mt-4 mb-1 text-gray-500 text-light ">대기업 번역가 출신 원어민 번역가가 전담합니다.
                         </p>
                         <Link href="#"
-                            className="inline-flex justify-center items-center font-medium text-[#1C64F2]">
+                            className="inline-flex justify-center items-center font-medium text-blue-700">
                            바로 의뢰하기
                             <svg className="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
                                 xmlns="http://www.w3.org/2000/svg">
