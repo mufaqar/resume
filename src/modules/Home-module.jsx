@@ -36,7 +36,7 @@ const HomeModule = () => {
           </div>
         </div>
       </section>
-      <section className='md:px-20 py-24 px-4 items-center'>
+      <section className='py-24 px-4 items-center'>
         <div className='lg:px-12'>
           <ImageBox
             Image_url={Mockup}
