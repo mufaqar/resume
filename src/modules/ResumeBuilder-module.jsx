@@ -63,7 +63,7 @@ const ResumeBuilderModule = (props) => {
             </div>
           </div>
           <div className="flex justify-center mt-20">
-          <button type="button" class="text-white bg-[#1A56DB] hover:bg-blue-700  font-medium rounded-[4px] text-base px-7 py-4 mb-2">Submit Request</button>
+          <button type="button" class="text-white bg-blue-700 hover:bg-blue-700  font-medium rounded-[4px] text-base px-7 py-4 mb-2">Submit Request</button>
           </div>
 
         </section>

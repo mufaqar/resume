@@ -22,7 +22,7 @@ export default function HomeBanner() {
           </p>
           <Link
             href="#"
-            className="inline-flex items-center bg-[#1A56DB] justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg hover:bg-[#1A56DB] focus:ring-none"
+            className="inline-flex items-center bg-blue-700 justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg hover:bg-blue-800 focus:ring-none"
           >
             레쥬메 제작
             <svg

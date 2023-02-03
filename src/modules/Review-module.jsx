@@ -205,7 +205,7 @@ const ReviewModule = () => {
             대학교 취업 센터, 취업 컨설팅 회사를 위한 대량 이력서 제작 서비스
             원어민 원서 전문가 + AI 기술 융합 서비스를 할인된 가격으로 경험하세요.
           </p>
-          <Link href="#" className="inline-flex items-center bg-[#1A56DB] justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg hover:bg-[#1A56DB] focus:ring-none">
+          <Link href="#" className="inline-flex items-center bg-blue-700 justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg hover:bg-blue-800 focus:ring-none">
             지금 바로 제작하기
           </Link>
         </div>

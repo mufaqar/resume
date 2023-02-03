@@ -102,7 +102,7 @@ export default function Pricing_plan() {
                             </svg>
                         </Link>
                         <Link href="#"
-                            className="text-white bg-[#1A56DB] focus:ring-none font-medium rounded-lg text-sm px-5 py-2.5 text-center my-8">
+                            className="text-white bg-blue-700 focus:ring-none font-medium rounded-lg text-sm px-5 py-2.5 text-center my-8">
                                 신청하기
                             </Link>
                         <ul role="list" className="space-y-4 text-left text-gray-900">

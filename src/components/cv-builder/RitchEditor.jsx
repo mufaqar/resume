@@ -109,7 +109,7 @@ const AIModel = ({ modalIsOpen, setIsOpen }) => {
           <div className="flex justify-center my-10">
             <button
               type="button"
-              class="text-white bg-[#1A56DB] hover:bg-blue-700  font-medium rounded-[4px] text-base px-7 py-3 mb-2"
+              class="text-white bg-blue-700 hover:bg-blue-700  font-medium rounded-[4px] text-base px-7 py-3 mb-2"
             >
               Generate
             </button>
