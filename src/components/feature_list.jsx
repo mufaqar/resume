@@ -3,7 +3,7 @@ import React from 'react'
 export default function Feature_list() {
   return (
     <section className="bg-[#F9FAFB]">
-        <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+        <div className="py-8 px-4 lg:px-12 sm:py-16 ">
             <div className="mb-8 lg:mb-16">
                 <h2 className="mb-4 md:text-4xl text-3xltracking-tight font-extrabold text-gray-900 text-center">
                 업계 최초 인공지능과 전문 첨삭가 융합 레쥬메 서비스

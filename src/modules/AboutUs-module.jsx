@@ -11,7 +11,7 @@ const AboutUsModule = () => {
   return (
     <>
       <section className=" bg-[url('/images/about_bg.png')] bg-right bg-no-repeat bg-cover">
-        <div className="py-8 px-4 text-center lg:py-16 lg:px-6 max-w-screen-xl mx-auto ">
+        <div className="py-8 px-4 text-center lg:py-16 lg:px-12 ">
           <div className="mx-auto max-w-screen-sm">
             <h2 className="mb-4 md:text-4xl text-3xl tracking-tight font-extrabold text-gray-900">
               ATS 친화 레쥬메 제작
@@ -29,7 +29,7 @@ const AboutUsModule = () => {
         </div>
       </section>
       <section className="md:px-20 py-24 px-4 items-center">
-        <div className="max-w-screen-xl mx-auto">
+        <div className="lg:px-12">
           <div className="mb-16">
             <h1 className="leading-tight md:text-4xl text-3xl font-extrabold text-center">
               한국을 포함한 전 세계 고객의 이력서를 제작합니다.
@@ -58,7 +58,7 @@ const AboutUsModule = () => {
       </section>
 
       <section className="bg-white ">
-        <div className="py-8 px-4 mx-auto space-y-12 max-w-screen-xl lg:space-y-20 sm:py-16 lg:px-6">
+        <div className="py-8 px-4 space-y-12 lg:px-12 lg:space-y-20 sm:py-16">
           <div className="gap-8 items-center lg:grid lg:grid-cols-2 xl:gap-16">
             <div className="text-gray-500 sm:text-lg ">
               <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 ">
@@ -241,7 +241,7 @@ const AboutUsModule = () => {
       </section>
 
       <section className="">
-        <div className="py-8 px-4 text-center lg:py-16 lg:px-6 max-w-screen-xl mx-auto">
+        <div className="py-8 px-4 text-center lg:py-16 lg:px-12">
           <div className="mx-auto max-w-screen-md">
             <h2 className="mb-4 md:text-4xl text-3xl tracking-tight font-extrabold text-gray-900">
               레쥬메 샘플
@@ -258,7 +258,7 @@ const AboutUsModule = () => {
       </section>
 
       <section className="bg-[#202632] py-24">
-        <div className="text-center max-w-screen-xl mx-auto">
+        <div className="text-center lg:px-12">
           <h2 className="leading-tight md:text-4xl text-3xl font-extrabold text-white text-center max-w-[7150px] mx-auto">
             지금 바로 공고 맞춤형 레쥬메를 제작하세요!
           </h2>

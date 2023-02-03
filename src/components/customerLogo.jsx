@@ -10,7 +10,7 @@ import Uber from '../../public/images/uber.png';
 export default function CustomerLogo() {
   return (
     <section className='bg-[#202632] md:px-20 py-24 px-4 items-center'>
-        <div className='max-w-screen-xl mx-auto'>
+        <div className='lg:px-12'>
             <h1 className='leading-tight md:text-4xl text-3xl font-extrabold text-white text-center mb-12'>
             수많은 글로벌 기업 재직자의 서류 합격을 도왔습니다.
             </h1>

@@ -4,7 +4,7 @@ import React from 'react';
 export default function Footer() {
     return (
         <footer className="bg-gray-50 ">
-            <div className="p-4 py-6 mx-auto max-w-screen-xl md:p-8 lg:p-16">
+            <div className="p-4 py-6 lg:px-12 md:p-8 lg:p-16">
                 <div className="gap-8 space-y-12 sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:space-y-0">
                     <address className="not-italic">
                         <p className="mb-6 text-sm font-semibold text-gray-900 uppercase ">회사 정보</p>

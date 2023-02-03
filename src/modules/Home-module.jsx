@@ -18,7 +18,7 @@ const HomeModule = () => {
       <HomeBanner />
       <CustomerLogo />
       <section className='md:px-20 py-24 px-4 items-center'>
-        <div className='max-w-screen-xl mx-auto'>
+        <div className='lg:px-12'>
           <div className='mb-16'>
             <h1 className='leading-tight md:text-4xl text-3xl font-extrabold text-center'>
               한국을 포함한 전 세계 고객의 이력서를 제작합니다.
@@ -37,7 +37,7 @@ const HomeModule = () => {
         </div>
       </section>
       <section className='md:px-20 py-24 px-4 items-center'>
-        <div className='max-w-screen-xl mx-auto'>
+        <div className='lg:px-12'>
           <ImageBox
             Image_url={Mockup}
             title="프리랜서가 아닌 정규직 전문가가

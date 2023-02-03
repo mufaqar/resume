@@ -6,7 +6,7 @@ const ReviewModule = () => {
   return (
     <div>
       <section className="bg-white">
-        <div className="py-8 px-4 text-center lg:py-16 lg:px-6 max-w-screen-xl mx-auto">
+        <div className="py-8 px-4 text-center lg:py-16 lg:px-12">
           <div className="mx-auto max-w-screen-sm">
             <h2 className="mb-4 md:text-4xl text-3xl tracking-tight font-extrabold text-gray-900">
               이지레쥬메 고객 리뷰
@@ -107,7 +107,7 @@ const ReviewModule = () => {
       </p>
 
       <section className="bg-white">
-        <div className="py-8 px-4 text-center lg:py-16 lg:px-6 max-w-screen-xl mx-auto">
+        <div className="py-8 px-4 text-center lg:py-16 lg:px-12">
           <div className="grid mb-8 lg:mb-12 lg:grid-cols-2">
             <figure
               className="flex flex-col justify-center items-center p-8 text-center bg-gray-50 border-b border-gray-200 md:p-12 lg:border-r ">
@@ -197,7 +197,7 @@ const ReviewModule = () => {
       </p>
 
       <section className='bg-[#202632] py-24 mt-12'>
-        <div className='text-center max-w-screen-xl mx-auto px-4'>
+        <div className='text-center lg:px-12 px-4'>
           <h2 className='leading-tight md:text-4xl text-3xl font-extrabold text-white text-center max-w-[715px] mx-auto'>
             지금 바로 공고 맞춤형 레쥬메를 제작하세요!
           </h2>

@@ -7,7 +7,7 @@ export default function Features() {
     return (
         <section className="bg-white">
             <div
-                className="gap-8 items-center py-8 px-4 lg:grid lg:grid-cols-2 xl:gap-16 sm:py-16 lg:px-6 max-w-screen-xl mx-auto">
+                className="gap-8 items-center py-8 px-4 lg:grid lg:grid-cols-2 xl:gap-16 sm:py-16 lg:px-12">
                 <Image className="mb-4 w-full lg:mb-0 rounded-lg"
                     src={Feature}
                     alt="feature image" />

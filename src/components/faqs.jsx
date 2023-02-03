@@ -3,7 +3,7 @@ import React from 'react';
 export default function Faqs() {
     return (
         <section className="bg-white ">
-            <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6 ">
+            <div className="py-8 px-4 lg:px-12 sm:py-16 ">
                 <h2
                     className="mb-6 lg:mb-8 text-3xl md:text-4xl tracking-tight font-extrabold text-center text-gray-900 ">
                     자주 묻는 질문

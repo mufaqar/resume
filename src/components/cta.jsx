@@ -4,7 +4,7 @@ import React from 'react'
 export default function Cta() {
     return (
         <section className='bg-[#202632] py-24'>
-            <div className='text-center max-w-screen-xl mx-auto'>
+            <div className='text-center lg:px-12'>
                 <h2 className='leading-tight md:text-4xl text-3xl font-extrabold text-white text-center max-w-[700px] mx-auto'>
                     대량 레쥬메 제작 & 아카데믹 번역 서비스가 필요하시나요?
                 </h2>
