@@ -16,7 +16,7 @@ export default function Pricing_plan() {
                 </div>
                 <div className="grid gap-8 xl:grid-cols-3 xl:gap-10">
                     <div
-                        className="flex flex-col p-6 mx-auto max-w-xl text-center bg-white rounded-lg border border-gray-200 shadow xl:max-w-lg xl:p-8">
+                        className="flex flex-col p-6 text-center bg-white rounded-lg border border-gray-200 shadow xl:p-8">
                         <h3 className="mb-4 text-2xl font-medium text-gray-900 ">영어 이력서</h3>
                         <span className="text-5xl font-extrabold text-gray-900 ">13만원</span>
                         <p className="mt-4 mb-1 text-gray-500 text-light ">원서 전문 번역가와 원어민이 제작합니다.
@@ -81,7 +81,7 @@ export default function Pricing_plan() {
                     </div>
 
                     <div
-                        className="flex flex-col p-6 mx-auto max-w-xl text-center bg-white rounded-lg border shadow xl:max-w-lg border-[#1A56DB] xl:p-8">
+                        className="flex flex-col p-6 text-center bg-white rounded-lg border shadow border-blue-700 xl:p-8">
                         <div className="mb-2">
                             <span
                                 className="py-1 px-3 text-sm text-blue-700 bg-[#E1EFFE] rounded ">Most
@@ -161,7 +161,7 @@ export default function Pricing_plan() {
                     </div>
 
                     <div
-                        className="flex flex-col p-6 mx-auto max-w-xl text-center bg-white rounded-lg border border-gray-200 shadow xl:max-w-lg  xl:p-8">
+                        className="flex flex-col p-6 text-center bg-white rounded-lg border border-gray-200 shadow xl:p-8">
                         <h3 className="mb-4 text-2xl font-medium text-gray-900 ">자소서/추천서 번역</h3>
                         <span className="text-5xl font-extrabold text-gray-900 ">200원/단어</span>
                         <p className="mt-4 mb-1 text-gray-500 text-light ">대기업 번역가 출신 원어민 번역가가 전담합니다.
