@@ -1,0 +1,83 @@
+import { Layout, SubTitle, Text } from "@/components/imports";
+import Image from "next/image";
+import React from "react";
+
+const CoverLetterModule = () => {
+  return (
+    <>
+      <Layout className="mt-28 pl-8" bg={false}>
+        <section className="mb-10 ">
+          <h1 className="font-bold text-[32px] mt-10 font-apple-sd">
+            Self Type Resume + Cover Letter
+          </h1>
+          <Text>
+            Please type all information, If you have any question, Please
+            contact here.
+          </Text>
+          <div className="border border-gray-200 p-7 mt-9">
+            <SubTitle>Cover Letter</SubTitle>
+
+            <label
+              for="message"
+              class="block mb-2 mt-4 font-inter text-sm font-medium text-gray-900 dark:text-white"
+            >
+              Paragraph 1
+            </label>
+            <textarea
+              id="message"
+              rows="7"
+              class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Write text here..."
+            ></textarea>
+            <label
+              for="message"
+              class="block mb-2 mt-4 font-inter text-sm font-medium text-gray-900 dark:text-white"
+            >
+              Paragraph 2
+            </label>
+            <textarea
+              id="message"
+              rows="7"
+              class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Write text here..."
+            ></textarea>
+            <label
+              for="message"
+              class="block mb-2 mt-4 font-inter text-sm font-medium text-gray-900 dark:text-white"
+            >
+              Paragraph 3
+            </label>
+            <textarea
+              id="message"
+              rows="8"
+              class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Write text here..."
+            ></textarea>
+          </div>
+        </section>
+        <section className="border border-gray-200 p-3">
+          <div className={"image-container mt-6 "}>
+            <Image src="/images/cv-temp-image-1.png" fill className={"image"} />
+          </div>
+        </section>
+      </Layout>
+
+      <div className="flex justify-center gap-6 mt-8 mb-10">
+        <button
+          type="button"
+          class="text-white bg-blue-700 hover:bg-blue-700 font-inter font-medium rounded-[4px] text-base px-6 py-3 mb-2"
+        >
+          Go Back resume
+        </button>
+        <button
+          type="button"
+          class="text-white bg-blue-700 hover:bg-blue-700 font-inter font-medium rounded-[4px] text-base px-6 py-3 mb-2"
+        >
+          Submit Request
+        </button>
+      </div>
+    </>
+  );
+};
+
+export default CoverLetterModule;
