@@ -1,18 +1,18 @@
-import {SubTitle, Text } from "@/components/imports";
+import { SubTitle, Text } from "@/components/imports";
 import React, { useState } from "react";
 
 const ServiceModule = () => {
-     const [selectedService,setSelectedService] = useState(0)
-     const [selectedDiscount,setSelectedDiscount] = useState(0)
-     const [selectedExpressOpt,setSelectedExpressOpt] = useState(0)
-     const [selectedPaymentOpt,setSelectedPaymentOpt] = useState(0)
+  const [selectedService, setSelectedService] = useState(0);
+  const [selectedDiscount, setSelectedDiscount] = useState(0);
+  const [selectedExpressOpt, setSelectedExpressOpt] = useState(0);
+  const [selectedPaymentOpt, setSelectedPaymentOpt] = useState(0);
   const SelectService = (id) => {
-     setSelectedService(id)
+    setSelectedService(id);
   };
   return (
     <>
-      <section className="container mx-auto flex gap-10">
-        <section className="mb-10 w-[65%]">
+      <section className="container px-4 mx-auto md:flex gap-10">
+        <section className="mb-10 md:w-[65%]">
           <h1 className="font-bold text-[32px] mt-10 font-apple-sd">
             Resume Service Checkout
           </h1>
@@ -21,10 +21,16 @@ const ServiceModule = () => {
           </Text>
           <div className="mt-8 border border-gray-200 p-8">
             <SubTitle>Resume Service</SubTitle>
-            <div className="flex gap-4 mt-6">
+            <div className="flex md:flex-row flex-col gap-4 mt-6">
               {[1, 2, 3].map((item, i) => {
                 return (
-                  <div class={`flex flex-col p-6 mx-auto max-w-lg text-center bg-white rounded-lg border  xl:p-8 ${selectedService === i ? 'border-blue-600' : 'border-gray-200' }`}>
+                  <div
+                    class={`flex flex-col p-6 mx-auto max-w-lg text-center bg-white rounded-lg border  p-8 ${
+                      selectedService === i
+                        ? "border-blue-600"
+                        : "border-gray-200"
+                    }`}
+                  >
                     <h3 class="mb-4 text-base font-semibold">Resume</h3>
                     <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
                       원서 전문 번역가 원어민 교정(영미권) 이력서 디자인 채용
@@ -62,15 +68,30 @@ const ServiceModule = () => {
           </div>
           <div className="mt-8 border border-gray-200 p-8">
             <SubTitle>Discount Offer</SubTitle>
-            <div className="flex  flex-col gap-4 mt-6">
+            <div className="flex flex-col gap-4 mt-6">
               {[1, 2].map((item, i) => {
                 return (
-                  <div class={` bg-white rounded-lg border cursor-pointer xl:p-8 ${selectedDiscount === i ? 'border-blue-600' : 'border-gray-200' }`} onClick={()=>setSelectedDiscount(i)}>
-               <div className="flex justify-start items-center gap-3 mb-4">
-                    <span className={`w-4 h-4 border-[6px] ${selectedDiscount === i ? 'border-blue-600' : 'border-gray-200' } rounded-full`}></span>
-                    <h3 class=" text-base font-semibold">Self Input (- 30000 KRW)</h3>
-               </div>  
-                  <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+                  <div
+                    class={` bg-white rounded-lg border cursor-pointer p-8 ${
+                      selectedDiscount === i
+                        ? "border-blue-600"
+                        : "border-gray-200"
+                    }`}
+                    onClick={() => setSelectedDiscount(i)}
+                  >
+                    <div className="flex justify-start items-center gap-3 mb-4">
+                      <span
+                        className={`w-4 h-4 border-[6px] ${
+                          selectedDiscount === i
+                            ? "border-blue-600"
+                            : "border-gray-200"
+                        } rounded-full`}
+                      ></span>
+                      <h3 class=" text-base font-semibold">
+                        Self Input (- 30000 KRW)
+                      </h3>
+                    </div>
+                    <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
                       원서 전문 번역가 원어민 교정(영미권) 이력서 디자인 채용
                       공고 맞춤형 제작
                     </p>
@@ -84,12 +105,25 @@ const ServiceModule = () => {
             <div className="flex  flex-col gap-4 mt-6">
               {[1, 2, 3].map((item, i) => {
                 return (
-                  <div class={` bg-white rounded-lg border cursor-pointer xl:p-8 ${selectedExpressOpt === i ? 'border-blue-600' : 'border-gray-200' }`} onClick={()=>setSelectedExpressOpt(i)}>
-               <div className="flex justify-start items-center gap-3 mb-4">
-                    <span className={`w-4 h-4 border-[6px] ${selectedExpressOpt === i ? 'border-blue-600' : 'border-gray-200' } rounded-full`}></span>
-                    <h3 class=" text-base font-semibold">Basic</h3>
-               </div>  
-                  <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+                  <div
+                    class={` bg-white rounded-lg border cursor-pointer p-8 ${
+                      selectedExpressOpt === i
+                        ? "border-blue-600"
+                        : "border-gray-200"
+                    }`}
+                    onClick={() => setSelectedExpressOpt(i)}
+                  >
+                    <div className="flex justify-start items-center gap-3 mb-4">
+                      <span
+                        className={`w-4 h-4 border-[6px] ${
+                          selectedExpressOpt === i
+                            ? "border-blue-600"
+                            : "border-gray-200"
+                        } rounded-full`}
+                      ></span>
+                      <h3 class=" text-base font-semibold">Basic</h3>
+                    </div>
+                    <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
                       원서 전문 번역가 원어민 교정(영미권) 이력서 디자인 채용
                       공고 맞춤형 제작
                     </p>
@@ -99,49 +133,64 @@ const ServiceModule = () => {
             </div>
           </div>
           <div className="mt-8 border border-gray-200 p-8">
-          <SubTitle>Payment Option</SubTitle>
-          <div className="flex flex-col gap-4 mt-6">
-            {[1, 2, 3].map((item, i) => {
-              return (
-                <div class={` bg-white rounded-lg border cursor-pointer xl:p-8 ${selectedPaymentOpt === i ? 'border-blue-600' : 'border-gray-200' }`} onClick={()=>setSelectedPaymentOpt(i)}>
-             <div className="flex justify-start items-center gap-3">
-                  <span className={`w-4 h-4 border-[6px] ${selectedPaymentOpt === i ? 'border-blue-600' : 'border-gray-200' } rounded-full`}></span>
-                  <h3 class=" text-base font-semibold">Bank Transfer</h3>
-             </div>  
-          
-                </div>
-              );
-            })}
-          </div>
-        </div>
-        </section>
-        <section className="w-[35%] mt-40">
-            <div className="p-6 border border-gray-200">
-               <SubTitle>Service Summary</SubTitle>
-               <p className="mt-8 text-sm">신청 서비스</p>
-               <div className="flex justify-between gap-6 mt-4 items-center">
-                    <h6 className="font-semibold font-apple-sd text-lg">Resume</h6>
-                    <p className="font-extralight ">150,000 KRW</p>
-               </div>
-               <div className="flex justify-between gap-6 items-center">
-                    <h6 className="font-semibold font-apple-sd text-lg">Express 24 h</h6>
-                    <p className="font-extralight ">50,000 KRW</p>
-               </div>
-               <div className="flex justify-between gap-6 items-center">
-                    <h6 className="font-semibold font-apple-sd text-lg">Self Input</h6>
-                    <p className="font-extralight ">-30,000 KRW</p>
-               </div>
-               <p className="text-sm mt-10">Total price</p>
-               <h6 className="font-semibold font-apple-sd text-lg">170,000 KRW</h6>
-               <p className="text-sm mt-10">Expected Develivery Date</p>
-               <h6 className="font-semibold font-apple-sd text-lg">24 Hours</h6>
-               <div className="mt-20 flex justify-center mb-6">
-               <button className="text-white bg-blue-700 rounded-xl hover:bg-blue-700 font-inter font-medium text-base px-6 py-3 mb-2"
-           >Pay Now</button>
-               </div>
+            <SubTitle>Payment Option</SubTitle>
+            <div className="flex flex-col gap-4 mt-6">
+              {[1, 2, 3].map((item, i) => {
+                return (
+                  <div
+                    class={` bg-white rounded-lg border cursor-pointer p-8 ${
+                      selectedPaymentOpt === i
+                        ? "border-blue-600"
+                        : "border-gray-200"
+                    }`}
+                    onClick={() => setSelectedPaymentOpt(i)}
+                  >
+                    <div className="flex justify-start items-center gap-3">
+                      <span
+                        className={`w-4 h-4 border-[6px] ${
+                          selectedPaymentOpt === i
+                            ? "border-blue-600"
+                            : "border-gray-200"
+                        } rounded-full`}
+                      ></span>
+                      <h3 class=" text-base font-semibold">Bank Transfer</h3>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
-            
-
+          </div>
+        </section>
+        <section className="md:w-[35%] md:mt-40">
+          <div className="p-6 border border-gray-200">
+            <SubTitle>Service Summary</SubTitle>
+            <p className="mt-8 text-sm">신청 서비스</p>
+            <div className="flex justify-between gap-6 mt-4 items-center">
+              <h6 className="font-semibold font-apple-sd text-lg">Resume</h6>
+              <p className="font-extralight ">150,000 KRW</p>
+            </div>
+            <div className="flex justify-between gap-6 items-center">
+              <h6 className="font-semibold font-apple-sd text-lg">
+                Express 24 h
+              </h6>
+              <p className="font-extralight ">50,000 KRW</p>
+            </div>
+            <div className="flex justify-between gap-6 items-center">
+              <h6 className="font-semibold font-apple-sd text-lg">
+                Self Input
+              </h6>
+              <p className="font-extralight ">-30,000 KRW</p>
+            </div>
+            <p className="text-sm mt-10">Total price</p>
+            <h6 className="font-semibold font-apple-sd text-lg">170,000 KRW</h6>
+            <p className="text-sm mt-10">Expected Develivery Date</p>
+            <h6 className="font-semibold font-apple-sd text-lg">24 Hours</h6>
+            <div className="mt-20 flex justify-center mb-6">
+              <button className="text-white bg-blue-700 rounded-xl hover:bg-blue-700 font-inter font-medium text-base px-6 py-3 mb-2">
+                Pay Now
+              </button>
+            </div>
+          </div>
         </section>
       </section>
     </>
