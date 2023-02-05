@@ -5,7 +5,7 @@ import React from "react";
 const CoverLetterModule = () => {
   return (
     <>
-      <Layout className="mt-28 pl-8" bg={false}>
+      <Layout className="mt-28 pr-12" bg={false}>
         <section className="mb-10 ">
           <h1 className="font-bold text-[32px] mt-10 font-apple-sd">
             Self Type Resume + Cover Letter
@@ -14,7 +14,7 @@ const CoverLetterModule = () => {
             Please type all information, If you have any question, Please
             contact here.
           </Text>
-          <div className="border border-gray-200 p-7 mt-9">
+          <div className="border border-gray-200 p-8 mt-9">
             <SubTitle>Cover Letter</SubTitle>
 
             <label
@@ -25,7 +25,7 @@ const CoverLetterModule = () => {
             </label>
             <textarea
               id="message"
-              rows="7"
+              rows="9"
               class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               placeholder="Write text here..."
             ></textarea>
@@ -37,7 +37,7 @@ const CoverLetterModule = () => {
             </label>
             <textarea
               id="message"
-              rows="7"
+              rows="9"
               class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               placeholder="Write text here..."
             ></textarea>
@@ -49,7 +49,7 @@ const CoverLetterModule = () => {
             </label>
             <textarea
               id="message"
-              rows="8"
+              rows="9"
               class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               placeholder="Write text here..."
             ></textarea>

@@ -23,7 +23,7 @@ const ResumeBuilderModule = (props) => {
 
   return (
     <>
-      <Layout>
+      <Layout bg={true} className="px-4 md:px-8 lg:px-16">
         <section className="mb-10">
           <h1 className="font-bold text-[32px] font-apple-sd mt-[124px] mb-[72px]">
             Self Type Resume + Cover Letter
@@ -67,7 +67,6 @@ const ResumeBuilderModule = (props) => {
           </div>
 
         </section>
-
       </Layout>
     </>
   );
