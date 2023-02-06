@@ -5,7 +5,7 @@ import Home_bg from '../../public/images/home_bg.png';
 
 export default function HomeBanner() {
   return (
-    <section className="relative bg-white bg-[url('/images/home_bg.png')] bg-contain bg-no-repeat min-h-[600px] bg-right ">
+    <section className="relative bg-white bg-[url('/images/home_bg.png')] bg-contain bg-no-repeat min-h-[600px] bg-pos-right ">
       <div className="grid py-8 lg:gap-8 xl:gap-0 lg:py-4 lg:grid-cols-12 px-4 lg:px-12">
         <div className="mr-auto place-self-center lg:col-span-7 max-w-[700px]">
           <span className="bg-[#E1EFFE] py-1 px-3 rounded-[6px] text-[#1E429F] text-lg font-medium">
