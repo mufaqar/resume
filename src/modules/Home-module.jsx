@@ -17,8 +17,8 @@ const HomeModule = () => {
     <>
       <HomeBanner />
       <CustomerLogo />
-      <section className='md:px-20 py-24 px-4 items-center'>
-        <div className='lg:px-12'>
+      <section className='py-24 items-center'>
+        <div className='lg:px-12 px-4'>
           <div className='mb-16'>
             <h1 className='leading-tight md:text-4xl text-3xl font-extrabold text-center'>
               한국을 포함한 전 세계 고객의 이력서를 제작합니다.
