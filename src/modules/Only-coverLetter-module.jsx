@@ -1,21 +1,21 @@
-import { ResumeDesign, SubTitle, Text } from "@/components/imports";
-import React, { useState } from "react";
+import { Layout, SubTitle, Text } from "@/components/imports";
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
 import { BsClockFill } from "react-icons/bs";
 
-
-const AutoTypeResumeModule = () => {
-
+const OnlyCoverLetterModule = () => {
   return (
     <>
-      <section className="px-4 md:px-8 lg:px-16 md:flex gap-10">
-        <section className="mb-10 md:w-[60%]">
+      <Layout className="mt-28 pr-12" bg={false}>
+        <section className="mb-20">
           <h1 className="font-bold text-[32px] mt-10 font-apple-sd">
-            Auto Type : Resume
+          Cover Letter
           </h1>
-          <Text className="mt-4">
-            Please type all information, If you have any question, Please
-            contact here.
+          <Text>
+          Please type all information, If you have any question, Please contact here.
           </Text>
+
           <div className="mt-8 border border-gray-200 p-8">
             <SubTitle>General Information</SubTitle>
             <div className="">
@@ -123,53 +123,83 @@ const AutoTypeResumeModule = () => {
                     />
                   </div>
                 </div>
-                <div>
-                  <div className="flex items-center gap-4 mb-4">
-                    <label
-                      for="message"
-                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                    >
-                      Summary
-                    </label>
-                    <button
-                      className="text-sm flex items-center gap-1 bg-[#DEF7EC] rounded-full px-4 py-1 text-[#03543F]"
-                    >
-                      <BsClockFill className="text-gray-500" /> AI Assistance
-                    </button>
-                  </div>
-                  <textarea
-                    id="message"
-                    rows="8"
-                    class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="Write your thoughts here..."
-                  ></textarea>
-                </div>
               </form>
             </div>
           </div>
           <div className="mt-8 border border-gray-200 p-8">
             <SubTitle>Resume File Upload</SubTitle>
             <div className="flex flex-col gap-4 mt-6">
-              <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="file_input" type="file"/>
-              <p className="text-xs  text-gray-400">Word, PDF File only. Max size of 800k</p>
+              <input
+                class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                id="file_input"
+                type="file"
+              />
+              <p className="text-xs  text-gray-400">
+                Word, PDF File only. Max size of 800k
+              </p>
             </div>
           </div>
-          
-        </section>
-        <section className="md:w-[40%]  md:mt-40">
-          <div className="border border-gray-200 ">
-            <ResumeDesign />
+
+          <div className="border border-gray-200 p-8 mt-9">
+            <SubTitle>Cover Letter</SubTitle>
+
+            <label
+              for="message"
+              class="block mb-2 mt-4 font-inter text-sm font-medium text-gray-900 dark:text-white"
+            >
+              Paragraph 1
+            </label>
+            <textarea
+              id="message"
+              rows="9"
+              class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Write text here..."
+            ></textarea>
+            <label
+              for="message"
+              class="block mb-2 mt-4 font-inter text-sm font-medium text-gray-900 dark:text-white"
+            >
+              Paragraph 2
+            </label>
+            <textarea
+              id="message"
+              rows="9"
+              class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Write text here..."
+            ></textarea>
+            <label
+              for="message"
+              class="block mb-2 mt-4 font-inter text-sm font-medium text-gray-900 dark:text-white"
+            >
+              Paragraph 3
+            </label>
+            <textarea
+              id="message"
+              rows="9"
+              class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Write text here..."
+            ></textarea>
           </div>
         </section>
-      </section>
-
-      <div className="mt-10 flex justify-center mb-20">
-        <button className="text-white bg-blue-700 rounded-xl hover:bg-blue-700 font-inter font-medium text-base px-6 py-3 mb-2">
-          Submit Request
-        </button>
-      </div>
+        <section>
+          <div className="border border-gray-200 p-3">
+            <div className={"image-container mt-6 "}>
+              <Image
+                src="/images/cv-temp-image-1.png"
+                fill
+                className={"image"}
+              />
+            </div>
+          </div>
+          <div className="mt-10 flex justify-center mb-20">
+            <button className="text-white bg-blue-700 rounded-xl hover:bg-blue-700 font-inter font-medium text-base px-6 py-3 mb-2">
+              Submit Request
+            </button>
+          </div>
+        </section>
+      </Layout>
     </>
   );
 };
 
-export default AutoTypeResumeModule;
+export default OnlyCoverLetterModule;
