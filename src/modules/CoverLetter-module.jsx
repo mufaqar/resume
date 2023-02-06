@@ -1,5 +1,6 @@
 import { Layout, SubTitle, Text } from "@/components/imports";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const CoverLetterModule = () => {
@@ -63,12 +64,13 @@ const CoverLetterModule = () => {
       </Layout>
 
       <div className="flex justify-center gap-6 mt-8 mb-10">
-        <button
+        <Link
+          href="/resume-builder"
           type="button"
           class="text-white bg-blue-700 hover:bg-blue-700 font-inter font-medium rounded-[4px] text-base px-6 py-3 mb-2"
         >
           Go Back resume
-        </button>
+        </Link>
         <button
           type="button"
           class="text-white bg-blue-700 hover:bg-blue-700 font-inter font-medium rounded-[4px] text-base px-6 py-3 mb-2"

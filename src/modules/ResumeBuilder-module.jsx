@@ -11,15 +11,14 @@ import {
   Certification,
   ExtraCurricularActivities,
   AddMoreSection,
+  ResumeDesign,
 } from "@/components/imports";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 const ResumeBuilderModule = (props) => {
-  const [selectTemplate, setSelectTemplate] = useState(0);
-  const SelectCVTemplate = (id) => {
-    setSelectTemplate(id)
-  }
+  
 
   return (
     <>
@@ -50,20 +49,9 @@ const ResumeBuilderModule = (props) => {
             <Image src="/images/cv-temp-image-1.png" fill className={"image"} />
           </div>
           {/* select cv template design */}
-          <div className="bg-white px-8 py-12 mt-10">
-            <SubTitle className='font-bold'>Resume Design</SubTitle>
-            <div className="grid grid-cols-2 gap-x-7 mt-4">
-             { [1,2,3,4].map((template,i)=>{
-                return(
-                  <div className={`image-container mt-6 border-[3px] rounded-2xl ${selectTemplate === i ? 'border-blue-600' : 'border-transparent'}`} key={i} onClick={()=>SelectCVTemplate(i)}>
-                     <Image src="/images/cv-design-seclaton.png" fill className={"image rounded-xl"} />
-                  </div>
-                )
-              })}
-            </div>
-          </div>
+         <div className="mt-10"><ResumeDesign /></div>
           <div className="flex justify-center mt-20">
-          <button type="button" class="text-white bg-blue-700 hover:bg-blue-700  font-medium rounded-[4px] text-base px-7 py-4 mb-2">Submit Request</button>
+          <Link href="/cover-letter"  className="text-white bg-blue-700 hover:bg-blue-700  font-medium rounded-[4px] text-base px-7 py-4 mb-2">Submit Request</Link>
           </div>
 
         </section>
