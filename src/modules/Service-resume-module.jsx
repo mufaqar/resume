@@ -1,7 +1,7 @@
 import { SubTitle, Text } from "@/components/imports";
 import React, { useState } from "react";
 
-const ServiceModule = () => {
+const ServiceResumeModule = () => {
   const [selectedService, setSelectedService] = useState(0);
   const [selectedDiscount, setSelectedDiscount] = useState(0);
   const [selectedExpressOpt, setSelectedExpressOpt] = useState(0);
@@ -197,4 +197,4 @@ const ServiceModule = () => {
   );
 };
 
-export default ServiceModule;
+export default ServiceResumeModule;
