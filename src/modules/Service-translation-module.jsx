@@ -2,15 +2,15 @@ import { SubTitle, Text } from "@/components/imports";
 import React, { useRef, useState } from "react";
 
 const ServiceTranslationModule = () => {
-  const [copyPasteText, setCopyPasteText] = useState("");
-
-  const HandleCopyPasteText = (e) => {
-    setCopyPasteText(e.target.value);
-  };
 
   const [selectedPaymentOpt, setSelectedPaymentOpt] = useState(0);
 
-
+  const [text, setText] = useState("");
+  const handleChange = (event) => {
+    setText(event.target.value);
+  };
+  const wordCount = text.split(" ").filter(Boolean).length;
+  
   return (
     <>
       <section className="container px-4 mx-auto md:flex gap-10">
@@ -29,10 +29,9 @@ const ServiceTranslationModule = () => {
             <textarea
               className="w-full mt-6 p-6 border-none outline-none shadow-none"
               rows="15"
-              value={copyPasteText}
-              onChange={HandleCopyPasteText}
+              onChange={handleChange} value={text} 
             ></textarea>
-            <div className="bg-gray-50 p-4 text-gray-400">{`0 words`}</div>
+            <div className="bg-gray-50 p-4 text-gray-400">{`${wordCount} words`}</div>
           </div>
           <div className="mt-8 border border-gray-200 p-8">
             <SubTitle>Information to get final file</SubTitle>
