@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Preview() {
     return (
-        <div className='bg-white md:p-6 flex '>
+        <div className='bg-white md:p-6 flex'>
             <div className='w-1/3'>
                 <h2 className='text-xl font-bold font-apple-sd'>
                     Ji Yeon Lee
