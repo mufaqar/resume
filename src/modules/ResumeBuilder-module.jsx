@@ -19,7 +19,6 @@ import Link from "next/link";
 import { useState } from "react";
 
 const ResumeBuilderModule = (props) => {
-  
 
   return (
     <>
