@@ -13,6 +13,7 @@ import {
   AddMoreSection,
   ResumeDesign,
 } from "@/components/imports";
+import Preview from "@/components/preview";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -46,7 +47,8 @@ const ResumeBuilderModule = (props) => {
         </section>
         <section>
           <div className={"image-container mt-6"}>
-            <Image src="/images/cv-temp-image-1.png" fill className={"image"} />
+            <Preview />
+            {/* <Image src="/images/cv-temp-image-1.png" fill className={"image"} /> */}
           </div>
           {/* select cv template design */}
          <div className="mt-10"><ResumeDesign /></div>
