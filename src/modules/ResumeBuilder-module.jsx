@@ -46,8 +46,7 @@ const ResumeBuilderModule = (props) => {
         </section>
         <section>
           <div className={"image-container mt-6"}>
-            <Preview />
-            {/* <Image src="/images/cv-temp-image-1.png" fill className={"image"} /> */}
+            <Image src="/images/cv-temp-image-1.png" fill className={"image"} /> 
           </div>
           {/* select cv template design */}
          <div className="mt-10"><ResumeDesign /></div>

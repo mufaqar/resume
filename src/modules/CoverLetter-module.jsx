@@ -1,4 +1,4 @@
-import { Layout, SubTitle, Text } from "@/components/imports";
+import { Layout, SubTitle, Text, Preview } from "@/components/imports";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -57,9 +57,7 @@ const CoverLetterModule = () => {
           </div>
         </section>
         <section className="border border-gray-200 p-3">
-          <div className={"image-container mt-6 "}>
-            <Image src="/images/cv-temp-image-1.png" fill className={"image"} />
-          </div>
+          <Preview />
         </section>
       </Layout>
 
