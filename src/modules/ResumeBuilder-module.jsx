@@ -15,6 +15,7 @@ import {
 } from "@/components/imports";
 import Preview from "@/components/preview";
 import { ChangeStoreDataState } from "@/reducers/resume-data-slice/resume-data-slice";
+import Image from "next/image";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
@@ -44,7 +45,7 @@ const ResumeBuilderModule = (props) => {
         </section>
         <section>
           <div className={"image-container mt-6"}>
-            <Preview/>
+          <Image src="/images/cv-temp-image-1.png" fill className={"image"} />
           </div>
           {/* select cv template design */}
           <div className="mt-10">

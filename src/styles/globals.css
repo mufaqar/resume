@@ -104,7 +104,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     display: none;
     -webkit-appearance: none;
 }
-
+._list li{
+     list-style: disc;
+}
+._list ul{
+     padding-left: .9rem;
+}
 /* media queries  */
 @media (max-height: 900px){
      .ReactModalPortal>div>div{
