@@ -1,9 +1,12 @@
 import { Layout, SubTitle, Text, Preview } from "@/components/imports";
-import Image from "next/image";
-import Link from "next/link";
+import { ChangeStoreDataState } from "@/reducers/resume-data-slice/resume-data-slice";
+import { useRouter } from "next/router";
 import React from "react";
+import { useDispatch } from "react-redux";
 
 const CoverLetterModule = () => {
+  const router = useRouter()
+  const dispatch = useDispatch()
   return (
     <>
       <Layout className="mt-28 pr-12" bg={false}>
@@ -62,13 +65,16 @@ const CoverLetterModule = () => {
       </Layout>
 
       <div className="flex justify-center gap-6 mt-8 mb-10">
-        <Link
-          href="/resume-builder"
+        <button
+          onClick={()=>{
+            dispatch(ChangeStoreDataState(false))
+            router.push('/resume-builder')
+          }}
           type="button"
           class="text-white bg-blue-700 hover:bg-blue-700 font-inter font-medium rounded-[4px] text-base px-6 py-3 mb-2"
         >
           Go Back resume
-        </Link>
+        </button>
         <button
           type="button"
           class="text-white bg-blue-700 hover:bg-blue-700 font-inter font-medium rounded-[4px] text-base px-6 py-3 mb-2"

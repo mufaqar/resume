@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Label, RitchEditor, SubTitle, Text } from "@/components/imports";
 import { BsPlusLg } from "react-icons/bs";
 import { AiOutlineDelete } from "react-icons/ai";
+import { useDispatch, useSelector } from "react-redux";
+import { HandleExtraCurricularActivities } from "@/reducers/resume-data-slice/resume-data-slice";
 
 const ExtraCurricularActivities = () => {
   const [forms, setForms] = useState([
@@ -51,6 +53,14 @@ const ExtraCurricularActivities = () => {
     setForms(updatedForms);
   };
 
+  const dispatch = useDispatch();
+  const storeDataState = useSelector(
+    (state) => state.ResumeFormData.storeDataState
+  );
+
+  if (storeDataState) {
+    dispatch(HandleExtraCurricularActivities(forms));
+  }
   return (
     <>
       <SubTitle className="mt-[42px]">Extra-curricular Activities</SubTitle>

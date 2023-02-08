@@ -14,17 +14,16 @@ import {
   ResumeDesign,
 } from "@/components/imports";
 import Preview from "@/components/preview";
-import Image from "next/image";
-import Link from "next/link";
+import { ChangeStoreDataState } from "@/reducers/resume-data-slice/resume-data-slice";
+import { useRouter } from "next/router";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
 
 const ResumeBuilderModule = (props) => {
 
-  const [summery, setsummery] = useState('')
-
-  const getRitchTextData = ({index, content}) => {
-    setsummery(content)
-  }
+  const router = useRouter()
+  const dispatch = useDispatch()
+  
 
   return (
     <>
@@ -35,13 +34,6 @@ const ResumeBuilderModule = (props) => {
           </h1>
           <SubTitle>Personal Details</SubTitle>
           <PersonalDetailsForm />
-          <SubTitle className="mt-16 mb-1">Summary</SubTitle>
-          <Text className="mb-4">
-            Write 2-4 short & energetic sentences to interest the reader!
-            Mention your role, experience & most importantly - your biggest
-            achievements, best qualities and skills.
-          </Text>
-          <RitchEditor RitchTextData={getRitchTextData} ai={true} />
           <EmploymentHistory />
           <Education />
           <Skills />
@@ -52,19 +44,22 @@ const ResumeBuilderModule = (props) => {
         </section>
         <section>
           <div className={"image-container mt-6"}>
-            <Image src="/images/cv-temp-image-1.png" fill className={"image"} />
+            <Preview/>
           </div>
           {/* select cv template design */}
           <div className="mt-10">
             <ResumeDesign />
           </div>
           <div className="flex justify-center mt-20">
-            <Link
-              href="/cover-letter"
+            <button
+              onClick={()=>{
+                dispatch(ChangeStoreDataState(true))
+                router.push('/cover-letter')
+              }}
               className="text-white bg-blue-700 hover:bg-blue-700  font-medium rounded-[4px] text-base px-7 py-4 mb-2"
             >
               Submit Request
-            </Link>
+            </button>
           </div>
         </section>
       </Layout>

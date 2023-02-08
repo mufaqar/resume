@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Label, SubTitle, Text } from "@/components/imports";
 import { BsPlusLg } from "react-icons/bs";
 import { AiOutlineDelete } from "react-icons/ai";
+import { useDispatch, useSelector } from "react-redux";
+import { HandleLanguages } from "@/reducers/resume-data-slice/resume-data-slice";
 
 const Languages = () => {
   const [forms, setForms] = useState([
@@ -41,6 +43,15 @@ const Languages = () => {
     }
     setEmpTab(id);
   };
+
+  const dispatch = useDispatch();
+  const storeDataState = useSelector(
+    (state) => state.ResumeFormData.storeDataState
+  );
+
+  if (storeDataState) {
+    dispatch(HandleLanguages(forms));
+  }
 
   return (
     <>

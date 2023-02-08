@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Label, RitchEditor, SubTitle } from "@/components/imports";
 import { BsPlusLg } from "react-icons/bs";
 import { AiOutlineDelete } from "react-icons/ai";
+import { useDispatch, useSelector } from "react-redux";
+import { HandleAddMoreSection } from "@/reducers/resume-data-slice/resume-data-slice";
 
 const AddMoreSection = () => {
   const [OpenOther, setOpenOther] = useState(false);
@@ -52,6 +54,16 @@ const AddMoreSection = () => {
     updatedForms[index]["Description"] = content;
     setForms(updatedForms);
   };
+
+  const dispatch = useDispatch();
+  const storeDataState = useSelector(
+    (state) => state.ResumeFormData.storeDataState
+  );
+
+  if (storeDataState) {
+    dispatch(HandleAddMoreSection(forms));
+  }
+
 
   return (
     <div>

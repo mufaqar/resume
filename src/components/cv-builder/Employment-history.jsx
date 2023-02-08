@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Label, RitchEditor, SubTitle, Text } from "@/components/imports";
 import { BsPlusLg } from "react-icons/bs";
 import { AiOutlineDelete } from "react-icons/ai";
+import { useDispatch, useSelector } from "react-redux";
+import { HandleEmploymentHistory } from "@/reducers/resume-data-slice/resume-data-slice";
 
 const EmploymentHistory = () => {
   const [forms, setForms] = useState([
@@ -54,6 +56,15 @@ const EmploymentHistory = () => {
     const updatedForms = [...forms];
     updatedForms[index]['Description'] = content
     setForms(updatedForms);
+  }
+
+  const dispatch = useDispatch();
+  const storeDataState = useSelector(
+    (state) => state.ResumeFormData.storeDataState
+  );
+
+  if (storeDataState) {
+    dispatch(HandleEmploymentHistory(forms));
   }
 
   return (

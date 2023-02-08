@@ -1,6 +1,19 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 
 export default function Preview() {
+
+    const PersonalDetailFields = useSelector((state)=>state.ResumeFormData.personalDetailState)
+    const EmploymentHistoryFields = useSelector((state)=>state.ResumeFormData.employmentHistoryState)
+    const EducationalFields = useSelector((state)=>state.ResumeFormData.educationState)
+    const SkillFields = useSelector((state)=>state.ResumeFormData.skillState)
+    const LanguageFields = useSelector((state)=>state.ResumeFormData.languagesState)
+    const CertificationFields = useSelector((state)=>state.ResumeFormData.certificationState)
+    const ExtraCurricularActivitiesFields = useSelector((state)=>state.ResumeFormData.extraCurricularActivitiesState)
+    const AddMoreSectionStateFields = useSelector((state)=>state.ResumeFormData.addMoreSectionState)
+
+    
+
     return (
         <div className='bg-white p-3 md:p-6 flex gap-3'>
             <div className='w-1/3'>

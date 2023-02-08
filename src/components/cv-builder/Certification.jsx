@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Label, SubTitle, Text } from "@/components/imports";
 import { BsPlusLg } from "react-icons/bs";
 import { AiOutlineDelete } from "react-icons/ai";
+import { useDispatch, useSelector } from "react-redux";
+import { HandleCertification } from "@/reducers/resume-data-slice/resume-data-slice";
 
 const Certification = () => {
   const [forms, setForms] = useState([
@@ -41,6 +43,15 @@ const Certification = () => {
     }
     setEmpTab(id);
   };
+
+  const dispatch = useDispatch();
+  const storeDataState = useSelector(
+    (state) => state.ResumeFormData.storeDataState
+  );
+
+  if (storeDataState) {
+    dispatch(HandleCertification(forms));
+  }
 
   return (
     <>
