@@ -5,7 +5,7 @@ const initialState = {
 }
 
 const ResumeDataSlice = createSlice({
-     name: "",
+     name: "resume data slice",
      initialState,
      reducers:{
           
