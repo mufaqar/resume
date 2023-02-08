@@ -8,12 +8,10 @@ const AddMoreSection = () => {
   const [forms, setForms] = useState([
     {
       id: 1,
-      jobtitle: "",
-      Employer: "",
-      City: "",
-      StartDate: "",
-      EndDate: "",
-      Description: "",
+      Aсtivity: "",
+        StartDate: "",
+        EndDate: "",
+        Description: "",
     },
   ]);
   console.log(
@@ -26,9 +24,7 @@ const AddMoreSection = () => {
       ...forms,
       {
         id: forms.length + 1,
-        jobtitle: "",
-        Employer: "",
-        City: "",
+        Aсtivity: "",
         StartDate: "",
         EndDate: "",
         Description: "",
@@ -80,12 +76,12 @@ const AddMoreSection = () => {
              }`}
              onClick={() => HandleEmpTab(index)}
            >
-             <div className="flex flex-col">
-               <span className="text-sm font-semibold text-gray-800">
-                 Sales Management Assistant at Google
-               </span>
-               <Label>Feb 2014 - Jan 2017</Label>
-             </div>
+           <div className="flex flex-col">
+           <span className="text-sm font-semibold text-gray-800 capitalize">
+             { forms[index]?.Aсtivity === '' ? 'Untitled' : forms[index]?.Aсtivity}
+           </span>
+           <Label>{ forms[index]?.StartDate === '' ? 'MM / YYYY' : forms[index]?.StartDate} - { forms[index]?.EndDate === '' ? 'MM / YYYY' : forms[index]?.EndDate}</Label>
+         </div>
              <svg
                data-accordion-icon
                class="w-6 h-6 rotate-180 shrink-0"
@@ -116,6 +112,9 @@ const AddMoreSection = () => {
                        className="input"
                        placeholder=""
                        required
+                       name="Aсtivity"
+                        value={form.Aсtivity}
+                        onChange={(e) => handleChange(e, index)}
                      />
                    </div>
                    <div>
@@ -126,6 +125,9 @@ const AddMoreSection = () => {
                        className="input"
                        placeholder=""
                        required
+                       name="City"
+                        value={form.City}
+                        onChange={(e) => handleChange(e, index)}
                      />
                    </div>
                    <div className="grid grid-cols-2 gap-3 items-end">

@@ -7,7 +7,8 @@ const Certification = () => {
   const [forms, setForms] = useState([
     {
       id: 1,
-      Languages: "",
+      Title: "",
+      Date: "",
     },
   ]);
   console.log(
@@ -20,7 +21,8 @@ const Certification = () => {
       ...forms,
       {
         id: forms.length + 1,
-        Languages: "",
+        Title: "",
+        Date: "",
       },
     ]);
   };
@@ -58,17 +60,16 @@ const Certification = () => {
             <div className="w-full">
               <button
                 type="button"
-                class={`flex items-center justify-between w-full px-5 py-4  font-medium text-left text-gray-500 border border-gray-200 ${
+                className={`flex items-center justify-between w-full px-5 py-4  font-medium text-left text-gray-500 border border-gray-200 ${
                   empTab === index ? "border-b-0" : ""
                 }`}
                 onClick={() => HandleEmpTab(index)}
               >
                 <div className="flex flex-col">
                   <span className="text-sm font-semibold text-gray-800">
-                    Distribution Manager - Level 2 at Korea Chamber of Commerce
-                    and Industry
+                  { forms[index]?.Title === '' ? 'Untitled' : forms[index]?.Title}
                   </span>
-                  <Label>Feb 2022</Label>
+                  <Label>{ forms[index]?.Date === '' ? 'MM / YYYY' : forms[index]?.Date}</Label>
                 </div>
                 <svg
                   data-accordion-icon
@@ -111,7 +112,7 @@ const Certification = () => {
                             type="text"
                             id="Date"
                             className="input"
-                            placeholder=""
+                            placeholder="MM / YYYY"
                             required
                             name="Date"
                             value={form.Date}

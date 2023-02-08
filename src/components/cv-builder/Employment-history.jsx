@@ -77,9 +77,9 @@ const EmploymentHistory = () => {
               >
                 <div className="flex flex-col">
                   <span className="text-sm font-semibold text-gray-800">
-                    Sales Management Assistant at Google
+                    { forms[index]?.jobtitle === '' ? 'Untitled' : forms[index]?.jobtitle}
                   </span>
-                  <Label>Feb 2014 - Jan 2017</Label>
+                  <Label>{ forms[index]?.StartDate === '' ? 'MM / YYYY' : forms[index]?.StartDate} - { forms[index]?.EndDate === '' ? 'MM / YYYY' : forms[index]?.EndDate}</Label>
                 </div>
                 <svg
                   data-accordion-icon
@@ -136,7 +136,7 @@ const EmploymentHistory = () => {
                             type="text"
                             id="StartDate"
                             className="input"
-                            placeholder=""
+                            placeholder="MM / YYYY"
                             required
                             name="StartDate"
                             value={form.StartDate}
@@ -148,7 +148,7 @@ const EmploymentHistory = () => {
                             type="text"
                             id="EndDate"
                             className="input"
-                            placeholder=""
+                            placeholder="MM / YYYY"
                             required
                             name="EndDate"
                             value={form.EndDate}

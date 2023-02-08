@@ -64,11 +64,12 @@ const Skills = () => {
             }`}
             onClick={() => HandleEmpTab(index)}
           >
-            <div className="flex flex-col">
-              <span className="text-sm font-semibold text-gray-800">
-                HubSpot Sales, Pipedrive & Salesforce
+           
+           <div className="flex flex-col">
+              <span className="text-sm font-semibold text-gray-800 capitalize">
+                { forms[index]?.Skill === '' ? 'Untitled' : forms[index]?.Skill}
               </span>
-              <Label>Expert</Label>
+              <Label>{ forms[index]?.SkillType === '' ? 'Untitled' : forms[index]?.SkillType} </Label>
             </div>
             <svg
               data-accordion-icon

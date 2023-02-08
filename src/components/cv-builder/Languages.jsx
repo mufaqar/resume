@@ -8,6 +8,7 @@ const Languages = () => {
     {
       id: 1,
       Languages: "",
+      LangType:""
     },
   ]);
   console.log(
@@ -21,6 +22,7 @@ const Languages = () => {
       {
         id: forms.length + 1,
         Languages: "",
+        LangType:""
       },
     ]);
   };
@@ -63,8 +65,8 @@ const Languages = () => {
               onClick={() => HandleEmpTab(index)}
             >
               <div className="flex flex-col">
-                <span className="text-sm font-semibold text-gray-800">
-                  Korean - Native
+                <span className="text-sm font-semibold text-gray-800 capitalize">
+                  { forms[index]?.Languages === '' ? 'Untitled' : forms[index]?.Languages} - { forms[index]?.LangType === '' ? 'Untitled' : forms[index]?.LangType}
                 </span>
               </div>
               <svg
@@ -88,7 +90,7 @@ const Languages = () => {
             >
               <div class="p-5 font-light border border-t-0 border-gray-200 ">
                 <form>
-                  <div class="grid gap-3 md:gap-x-5 md:gap-y-4 lg:gap-x-10 lg:gap-y-8 mb-6 mt-[22px]">
+                  <div >
                     <div>
                       <Label>Languages</Label>
                       <input
@@ -102,6 +104,21 @@ const Languages = () => {
                       onChange={(e) => handleChange(e, index)}
                       />
                     </div>
+                    <div className="mt-3">
+                    <Label>Type</Label>
+                    <select
+                      id="countries"
+                      class="border input"
+                      name="LangType"
+                      value={form.LangType}
+                      onChange={(e) => handleChange(e, index)}
+                    >
+                      <option selected>Choose a Type</option>
+                      <option value="Conversational">Conversational</option>
+                      <option value="Fluent">Fluent</option>
+                      <option value="Native">Native</option>
+                    </select>
+                  </div>
                   </div>
                 </form>
               </div>

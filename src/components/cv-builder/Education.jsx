@@ -66,11 +66,12 @@ const Education = () => {
               }`}
             onClick={() => HandleEmpTab(index)}
           >
+            
             <div className="flex flex-col">
-              <span className="text-sm font-semibold text-gray-800">
-                B.A. Business Administration at Wallace State University
+              <span className="text-sm font-semibold text-gray-800 capitalize">
+                { forms[index]?.Degree === '' ? '' : forms[index]?.Degree} at { forms[index]?.University === '' ? 'Untitled' : forms[index]?.University}
               </span>
-              <Label>Jan 2012 - Jan 2014</Label>
+              <Label>{ forms[index]?.StartDate === '' ? 'MM / YYYY' : forms[index]?.StartDate} - { forms[index]?.EndDate === '' ? 'MM / YYYY' : forms[index]?.EndDate}</Label>
             </div>
             <svg
               data-accordion-icon
