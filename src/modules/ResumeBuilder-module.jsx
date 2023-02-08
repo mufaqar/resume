@@ -19,6 +19,13 @@ import Link from "next/link";
 import { useState } from "react";
 
 const ResumeBuilderModule = (props) => {
+
+  const [summery, setsummery] = useState('')
+
+  const getRitchTextData = ({index, content}) => {
+    setsummery(content)
+  }
+
   return (
     <>
       <Layout bg={true} className="px-4 md:px-8 lg:px-16">
@@ -34,7 +41,7 @@ const ResumeBuilderModule = (props) => {
             Mention your role, experience & most importantly - your biggest
             achievements, best qualities and skills.
           </Text>
-          <RitchEditor ai={true} />
+          <RitchEditor RitchTextData={getRitchTextData} ai={true} />
           <EmploymentHistory />
           <Education />
           <Skills />

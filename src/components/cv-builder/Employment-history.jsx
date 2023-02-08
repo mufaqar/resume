@@ -15,7 +15,7 @@ const EmploymentHistory = () => {
       Description: "",
     }
   ]);
-  console.log("🚀 ~ file: Employment-history.jsx:18 ~ EmploymentHistory ~ forms", forms)
+ 
 
   const RenderComponent = (e, index) => {
     setForms([

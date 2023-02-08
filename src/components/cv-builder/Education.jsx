@@ -14,7 +14,7 @@ const Education = () => {
       EndDate: ""
     }
   ]);
-  console.log("🚀 ~ file: Employment-history.jsx:18 ~ EmploymentHistory ~ forms", forms)
+  
 
   const RenderComponent = (e, index) => {
     setForms([
@@ -46,7 +46,6 @@ const Education = () => {
     }
     setEmpTab(id);
   };
-
 
 
   return (
