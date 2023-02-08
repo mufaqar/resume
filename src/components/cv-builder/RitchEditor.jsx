@@ -6,7 +6,8 @@ import { RxCross1 } from "react-icons/rx";
 import { SubTitle, Text } from "@/components/imports";
 import Image from "next/image";
 
-const Summery = ({ ai }) => {
+const Summery = ({ ai, RitchTextData, index }) => {
+
   const [modalIsOpen, setIsOpen] = React.useState(false);
   function openModal() {
     setIsOpen(true);
@@ -24,13 +25,19 @@ const Summery = ({ ai }) => {
   const { quill, quillRef } = useQuill({ theme, modules });
   const [text, setText] = useState();
 
+
   React.useEffect(() => {
     if (quill) {
       quill.on("text-change", (delta, oldDelta, source) => {
         setText(quill.root.innerHTML);
+        const content = quill.root.innerHTML
+        const data = {content, index}
+        RitchTextData && RitchTextData(data)
       });
     }
   }, [quill]);
+
+
   return (
     <>
       <div className="bg-[#EFF2F9] relative h-[236px]">

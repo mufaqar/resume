@@ -19,7 +19,6 @@ import Link from "next/link";
 import { useState } from "react";
 
 const ResumeBuilderModule = (props) => {
-
   return (
     <>
       <Layout bg={true} className="px-4 md:px-8 lg:px-16">
@@ -46,14 +45,20 @@ const ResumeBuilderModule = (props) => {
         </section>
         <section>
           <div className={"image-container mt-6"}>
-            <Image src="/images/cv-temp-image-1.png" fill className={"image"} /> 
+            <Image src="/images/cv-temp-image-1.png" fill className={"image"} />
           </div>
           {/* select cv template design */}
-         <div className="mt-10"><ResumeDesign /></div>
-          <div className="flex justify-center mt-20">
-          <Link href="/cover-letter"  className="text-white bg-blue-700 hover:bg-blue-700  font-medium rounded-[4px] text-base px-7 py-4 mb-2">Submit Request</Link>
+          <div className="mt-10">
+            <ResumeDesign />
           </div>
-
+          <div className="flex justify-center mt-20">
+            <Link
+              href="/cover-letter"
+              className="text-white bg-blue-700 hover:bg-blue-700  font-medium rounded-[4px] text-base px-7 py-4 mb-2"
+            >
+              Submit Request
+            </Link>
+          </div>
         </section>
       </Layout>
     </>

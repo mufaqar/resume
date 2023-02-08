@@ -1,74 +1,88 @@
 // import React, { useState } from 'react';
 
-// const YourFormComponent = ({ idx, onChange, values }) => {
-//   return (
-//     <div key={idx}>
-//       <input
-//         type="text"
-//         name={`field1-${idx}`}
-//         onChange={onChange}
-//         value={values[`field1-${idx}`]}
-//       />
-//       <input
-//         type="text"
-//         name={`field2-${idx}`}
-//         onChange={onChange}
-//         value={values[`field2-${idx}`]}
-//       />
-//     </div>
-//   );
-// };
-
-// const AppendComponent = () => {
-//   const [components, setComponents] = useState([0]);
-//   const [values, setValues] = useState({});
-//   console.log("🚀 ~ file: test.js:25 ~ AppendComponent ~ values", values)
+// const App = () => {
+//   const [forms, setForms] = useState([{ id: 1, name: '', email: '' }]);
 
 //   const handleClick = () => {
-//     setComponents([...components, components.length]);
+//     setForms([...forms, { id: forms.length + 1, name: '', email: '' }]);
 //   };
 
-//   const handleChange = (e) => {
-//     setValues({ ...values, [e.target.name]: e.target.value });
+//   const handleChange = (e, index) => {
+//     const updatedForms = [...forms];
+//     updatedForms[index][e.target.name] = e.target.value;
+//     setForms(updatedForms);
+//   };
+
+//   const handleRemove = index => {
+//     setForms(forms.filter((form, i) => i !== index));
 //   };
 
 //   return (
 //     <div>
-//       <button onClick={handleClick}>Add Form</button>
-//       {components.map((comp, idx) => (
-//         <YourFormComponent
-//           key={idx}
-//           idx={idx}
-//           onChange={handleChange}
-//           values={values}
-//         />
+//       {forms.map((form, index) => (
+//         <div key={form.id}>
+//           <input
+//             type="text"
+//             name="name"
+//             placeholder="Name"
+//             value={form.name}
+//             onChange={e => handleChange(e, index)}
+//           />
+//           <input
+//             type="email"
+//             name="email"
+//             placeholder="Email"
+//             value={form.email}
+//             onChange={e => handleChange(e, index)}
+//           />
+//           <button onClick={() => handleRemove(index)}>Remove</button>
+//         </div>
 //       ))}
+//       <button onClick={handleClick}>Add Form</button>
 //     </div>
 //   );
 // };
 
-// export default AppendComponent;
+// export default App;
 
 
 
 
-import React, { useState } from "react";
+import React, { useState } from 'react';
+import ReactQuill from 'react-quill';
 
-const TextAreaWordCount = () => {
-  const [text, setText] = useState("");
 
-  const handleChange = (event) => {
-    setText(event.target.value);
+const App = () => {
+  const [forms, setForms] = useState([{ id: 1, description: '' }]);
+
+  const handleClick = () => {
+    setForms([...forms, { id: forms.length + 1, description: '' }]);
   };
 
-  const wordCount = text.split(" ").filter(Boolean).length;
+  const handleChange = (value, index) => {
+    const updatedForms = [...forms];
+    updatedForms[index].description = value;
+    setForms(updatedForms);
+  };
+
+  const handleRemove = index => {
+    setForms(forms.filter((form, i) => i !== index));
+  };
 
   return (
     <div>
-      <textarea onChange={handleChange} value={text} />
-      <p>Word Count: {wordCount}</p>
+      {forms.map((form, index) => (
+        <div key={form.id}>
+          <ReactQuill
+            value={form.description}
+            onChange={(value) => handleChange(value, index)}
+          />
+          <button onClick={() => handleRemove(index)}>Remove</button>
+        </div>
+      ))}
+      <button onClick={handleClick}>Add Form</button>
     </div>
   );
 };
 
-export default TextAreaWordCount;
+export default App;
