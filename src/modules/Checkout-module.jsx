@@ -22,7 +22,23 @@ const ServiceResumeModule = () => {
           <div className="mt-8 border border-gray-200 p-8">
             <SubTitle>Resume Service</SubTitle>
             <div className="flex md:flex-row flex-col gap-4 mt-6">
-              {[1, 2, 3].map((item, i) => {
+              {[
+                {
+                  title:"Resume",
+                  info: "원서 전문 번역가 원어민 교정(영미권) 이력서 디자인 채용 공고 맞춤형 제작",
+                  badge: "인공지능 작성 도우미"
+                },
+                {
+                  title:"Resume + Cover Letter",
+                  info: "원서 전문 번역가 원어민 교정(영미권) 이력서 디자인 채용 공고 맞춤형 제작",
+                  badge: "인공지능 작성 도우미"
+                },
+                {
+                  title:"Cover Letter",
+                  info: "원서 전문 첨삭가 원어민 교정(영미권) 커버레터 디자인 채용 공고 맞춤형 제작",
+                  badge: "인공지능 작성 도우미"
+                }
+            ].map((item, i) => {
                 return (
                   <div
                   key={i}
@@ -32,13 +48,12 @@ const ServiceResumeModule = () => {
                         : "border-gray-200"
                     }`}
                   >
-                    <h3 class="mb-4 text-base font-semibold">Resume</h3>
+                    <h3 class="mb-4 text-base font-semibold">{item.title}</h3>
                     <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
-                      원서 전문 번역가 원어민 교정(영미권) 이력서 디자인 채용
-                      공고 맞춤형 제작
+                     {item.info}
                     </p>
 
-                    <div class="bg-blue-100 flex items-center p-1 rounded-lg mt-2">
+                    <div class="bg-blue-100 flex items-center gap-2 p-1 rounded-lg mt-2">
                       <svg
                         class="flex-shrink-0 w-5 h-5 text-blue-500 dark:text-green-400"
                         fill="currentColor"
@@ -51,7 +66,7 @@ const ServiceResumeModule = () => {
                           clip-rule="evenodd"
                         ></path>
                       </svg>
-                      <span className="text-xs">인공지능 작성 도우미</span>
+                      <span className="text-xs">{item.badge}</span>
                     </div>
                     <div className="flex justify-center">
                       <button
@@ -70,7 +85,14 @@ const ServiceResumeModule = () => {
           <div className="mt-8 border border-gray-200 p-8">
             <SubTitle>Discount Offer</SubTitle>
             <div className="flex flex-col gap-4 mt-6">
-              {[1, 2].map((item, i) => {
+              {[{
+                title: "Self Input (- 30000 KRW)",
+                info:'You can get 30000 KRW Discount for self information input in Korean'
+              },
+            {
+              title: "Auto Input",
+              info:"You only need to put minumum info and current Korean resume file."
+            }].map((item, i) => {
                 return (
                   <div key={i}
                     class={` bg-white rounded-lg border cursor-pointer p-8 ${
@@ -88,13 +110,12 @@ const ServiceResumeModule = () => {
                             : "border-gray-200"
                         } rounded-full`}
                       ></span>
-                      <h3 class=" text-base font-semibold">
-                        Self Input (- 30000 KRW)
+                      <h3 class=" text-base font-normal">
+                        {item?.title}
                       </h3>
                     </div>
                     <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
-                      원서 전문 번역가 원어민 교정(영미권) 이력서 디자인 채용
-                      공고 맞춤형 제작
+                      {item?.info}
                     </p>
                   </div>
                 );
@@ -104,7 +125,20 @@ const ServiceResumeModule = () => {
           <div className="mt-8 border border-gray-200 p-8">
             <SubTitle>Express Option</SubTitle>
             <div className="flex  flex-col gap-4 mt-6">
-              {[1, 2, 3].map((item, i) => {
+              {[
+                {
+                  title:"Basic",
+                  info:"Takes 3 ~ 4 Days Delivery period."
+                },
+                {
+                  title:"24 Hours (+50000 KRW)",
+                  info:"Takes 24 Hours Delivery Periods."
+                },
+                {
+                  title:"12 Hours (+60000 KRW)",
+                  info:"Takes only 12 Hours to delivery. (Only available at Business hours 9am-7pm)"
+                }
+              ].map((item, i) => {
                 return (
                   <div key={i}
                     class={` bg-white rounded-lg border cursor-pointer p-8 ${
@@ -122,11 +156,10 @@ const ServiceResumeModule = () => {
                             : "border-gray-200"
                         } rounded-full`}
                       ></span>
-                      <h3 class=" text-base font-semibold">Basic</h3>
+                      <h3 class=" text-base font-normal">{item?.title}</h3>
                     </div>
                     <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
-                      원서 전문 번역가 원어민 교정(영미권) 이력서 디자인 채용
-                      공고 맞춤형 제작
+                      {item?.info}
                     </p>
                   </div>
                 );
@@ -136,7 +169,7 @@ const ServiceResumeModule = () => {
           <div className="mt-8 border border-gray-200 p-8">
             <SubTitle>Payment Option</SubTitle>
             <div className="flex flex-col gap-4 mt-6">
-              {[1, 2, 3].map((item, i) => {
+              {['Kakaopay', 'Bank Transfer', 'Toss Payment'].map((item, i) => {
                 return (
                   <div key={i}
                     class={` bg-white rounded-lg border cursor-pointer p-8 ${
@@ -154,7 +187,7 @@ const ServiceResumeModule = () => {
                             : "border-gray-200"
                         } rounded-full`}
                       ></span>
-                      <h3 class=" text-base font-semibold">Bank Transfer</h3>
+                      <h3 class=" text-base font-normal">{item}</h3>
                     </div>
                   </div>
                 );
