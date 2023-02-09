@@ -52,9 +52,9 @@ const EmploymentHistory = () => {
     setEmpTab(id);
   };
 
-  const getRitchTextData = ({index, content}) => {
+  const getRitchTextData = ({index, value}) => {
     const updatedForms = [...forms];
-    updatedForms[index]['Description'] = content
+    updatedForms[index]['Description'] = value
     setForms(updatedForms);
   }
 

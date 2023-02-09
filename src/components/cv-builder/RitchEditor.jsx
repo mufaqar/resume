@@ -21,8 +21,9 @@ const Summery = ({ ai, RitchTextData, index }) => {
   const [content, setContent] = useState('');
 
   const handleChange = (value) => {
+    const data = { value, index };
     setContent(value);
-    RitchTextData && RitchTextData(value);
+    RitchTextData(data);
   };
 
   const theme = "snow";

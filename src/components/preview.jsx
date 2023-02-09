@@ -83,7 +83,7 @@ export default function Preview() {
         <div>
           <h3 className="text-lg font-bold font-apple-sd">Summary</h3>
           <div className="text-sm font-medium mt-2 space-y-2 font-apple-sd">
-            {parse('' + PersonalDetailFields?.summery)}
+            {parse('' +  PersonalDetailFields?.summery)}
           </div>
         </div>
         <div className="mt-5">
@@ -99,7 +99,7 @@ export default function Preview() {
                 {emp?.StartDate} - {emp?.EndDate}
               </p>
               <div className="text-sm font-medium mt-2 space-y-2 list-disc font-apple-sd _list">
-                {parse(emp?.Description)}
+                {parse('' + emp?.Description)}
               </div>
             </div>
           ))}

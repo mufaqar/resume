@@ -14,8 +14,8 @@ const PersonalDetailsForm = () => {
   
   const [summery, setsummery] = useState('')
 
-  const getRitchTextData = ({index, content}) => {
-    setsummery(content)
+  const getRitchTextData = ({value, index}) => {
+    setsummery(value)
   }
 
   const handleChange = (event) => {
