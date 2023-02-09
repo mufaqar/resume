@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import ReactHtmlParser from "react-html-parser";
+import parse from "html-react-parser";
 
 export default function Preview() {
   const PersonalDetailFields = useSelector(
@@ -83,7 +83,7 @@ export default function Preview() {
         <div>
           <h3 className="text-lg font-bold font-apple-sd">Summary</h3>
           <div className="text-sm font-medium mt-2 space-y-2 font-apple-sd">
-            {ReactHtmlParser(PersonalDetailFields?.summery)}
+            {parse(PersonalDetailFields?.summery)}
           </div>
         </div>
         <div className="mt-5">
@@ -99,7 +99,7 @@ export default function Preview() {
                 {emp?.StartDate} - {emp?.EndDate}
               </p>
               <div className="text-sm font-medium mt-2 space-y-2 list-disc font-apple-sd _list">
-                {ReactHtmlParser(emp?.Description)}
+                {parse(emp?.Description)}
               </div>
             </div>
           ))}
