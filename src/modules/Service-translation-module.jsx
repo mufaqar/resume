@@ -93,7 +93,7 @@ const ServiceTranslationModule = () => {
             <div className="flex flex-col gap-4 mt-6">
               {[1, 2, 3].map((item, i) => {
                 return (
-                  <div
+                  <div key={i}
                     class={` bg-white rounded-lg border cursor-pointer p-8 ${
                       selectedPaymentOpt === i
                         ? "border-blue-600"

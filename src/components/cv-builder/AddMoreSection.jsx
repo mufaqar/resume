@@ -71,7 +71,7 @@ const AddMoreSection = () => {
 
       <section className={OpenOther ? "block" : "hidden"}>
         {forms.map((form, index) => (
-          <div
+          <div key={index}
             id="accordion-collapse"
             className="mt-6"
             data-accordion="collapse"

@@ -25,7 +25,8 @@ const ServiceResumeModule = () => {
               {[1, 2, 3].map((item, i) => {
                 return (
                   <div
-                    class={`flex flex-col p-6 mx-auto max-w-lg text-center bg-white rounded-lg border  p-8 ${
+                  key={i}
+                    class={`flex flex-col p-6 mx-auto max-w-lg text-center bg-white rounded-lg border  ${
                       selectedService === i
                         ? "border-blue-600"
                         : "border-gray-200"
@@ -71,7 +72,7 @@ const ServiceResumeModule = () => {
             <div className="flex flex-col gap-4 mt-6">
               {[1, 2].map((item, i) => {
                 return (
-                  <div
+                  <div key={i}
                     class={` bg-white rounded-lg border cursor-pointer p-8 ${
                       selectedDiscount === i
                         ? "border-blue-600"
@@ -105,7 +106,7 @@ const ServiceResumeModule = () => {
             <div className="flex  flex-col gap-4 mt-6">
               {[1, 2, 3].map((item, i) => {
                 return (
-                  <div
+                  <div key={i}
                     class={` bg-white rounded-lg border cursor-pointer p-8 ${
                       selectedExpressOpt === i
                         ? "border-blue-600"
@@ -137,7 +138,7 @@ const ServiceResumeModule = () => {
             <div className="flex flex-col gap-4 mt-6">
               {[1, 2, 3].map((item, i) => {
                 return (
-                  <div
+                  <div key={i}
                     class={` bg-white rounded-lg border cursor-pointer p-8 ${
                       selectedPaymentOpt === i
                         ? "border-blue-600"
