@@ -7,7 +7,6 @@ import { SubTitle, Text } from "@/components/imports";
 import Image from "next/image";
 
 const Summery = ({ ai, RitchTextData, index }) => {
-
   const [modalIsOpen, setIsOpen] = React.useState(false);
   function openModal() {
     setIsOpen(true);
@@ -25,20 +24,16 @@ const Summery = ({ ai, RitchTextData, index }) => {
   const { quill, quillRef } = useQuill({ theme, modules });
   const [text, setText] = useState();
 
-
   React.useEffect(() => {
-    if (typeof window !== "undefined") {
     if (quill) {
       quill.on("text-change", (delta, oldDelta, source) => {
         setText(quill.root.innerHTML);
-        const content = quill.root.innerHTML
-        const data = {content, index}
-        RitchTextData && RitchTextData(data)
+        const content = quill.root.innerHTML;
+        const data = { content, index };
+        RitchTextData && RitchTextData(data);
       });
     }
-  }
   }, [quill]);
-
 
   return (
     <>
