@@ -30,9 +30,9 @@ const PersonalDetailsForm = () => {
     (state) => state.ResumeFormData.storeDataState
   );
 
-  if (storeDataState) {
+  // if (storeDataState) {
     dispatch(HandlePersonalDetail({...formField, summery}));
-  }
+  // }
 
   return (
     <form>

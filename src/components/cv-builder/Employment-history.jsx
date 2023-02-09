@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Label, RitchEditor, SubTitle, Text } from "@/components/imports";
 import { BsPlusLg } from "react-icons/bs";
 import { AiOutlineDelete } from "react-icons/ai";
+import { MdKeyboardArrowDown,MdKeyboardArrowUp } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
 import { HandleEmploymentHistory } from "@/reducers/resume-data-slice/resume-data-slice";
 
@@ -77,7 +78,7 @@ const EmploymentHistory = () => {
       </Text>
       {forms.map((form, index) => (
         <div id="accordion-collapse" className="mt-4" data-accordion="collapse" key={form.id}>
-          <div className="mt-4 flex gap-4">
+          <div className="mt-4 flex group gap-4">
             <div className="w-full">
               <button
                 type="button"
@@ -92,19 +93,9 @@ const EmploymentHistory = () => {
                   </span>
                   <Label>{ forms[index]?.StartDate === '' ? 'MM / YYYY' : forms[index]?.StartDate} - { forms[index]?.EndDate === '' ? 'MM / YYYY' : forms[index]?.EndDate}</Label>
                 </div>
-                <svg
-                  data-accordion-icon
-                  class="w-6 h-6 rotate-180 shrink-0"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                    clipRule="evenodd"
-                  ></path>
-                </svg>
+                {
+                  empTab === index ? <MdKeyboardArrowUp size={26}/> : <MdKeyboardArrowDown size={26}/>
+                }
               </button>
 
               <div
@@ -196,7 +187,7 @@ const EmploymentHistory = () => {
             </div>
             <AiOutlineDelete
               size={20}
-              className="cursor-pointer mt-7"
+              className="cursor-pointer mt-7 hidden group-hover:block"
               onClick={() => handleRemove(index)}
             />
           </div>
