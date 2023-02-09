@@ -1,88 +1,33 @@
-// import React, { useState } from 'react';
+import dynamic from "next/dynamic";
+import { useState } from "react";
 
-// const App = () => {
-//   const [forms, setForms] = useState([{ id: 1, name: '', email: '' }]);
-
-//   const handleClick = () => {
-//     setForms([...forms, { id: forms.length + 1, name: '', email: '' }]);
-//   };
-
-//   const handleChange = (e, index) => {
-//     const updatedForms = [...forms];
-//     updatedForms[index][e.target.name] = e.target.value;
-//     setForms(updatedForms);
-//   };
-
-//   const handleRemove = index => {
-//     setForms(forms.filter((form, i) => i !== index));
-//   };
-
-//   return (
-//     <div>
-//       {forms.map((form, index) => (
-//         <div key={form.id}>
-//           <input
-//             type="text"
-//             name="name"
-//             placeholder="Name"
-//             value={form.name}
-//             onChange={e => handleChange(e, index)}
-//           />
-//           <input
-//             type="email"
-//             name="email"
-//             placeholder="Email"
-//             value={form.email}
-//             onChange={e => handleChange(e, index)}
-//           />
-//           <button onClick={() => handleRemove(index)}>Remove</button>
-//         </div>
-//       ))}
-//       <button onClick={handleClick}>Add Form</button>
-//     </div>
-//   );
+const ReactQuill = dynamic(import('react-quill'), { ssr: false })
+// const theme = "snow";
+// const modules = {
+//   toolbar: [
+//     ["bold", "italic", "underline", "strike"],
+//     [{ list: "ordered" }, { list: "bullet" }],
+//     ["link"],
+//   ],
 // };
-
-// export default App;
-
-
-
-
-import React, { useState } from 'react';
-import ReactQuill from 'react-quill';
+// export default function Test() {
+//   return (<div> <ReactQuill theme="snow" modules={modules} placeholder="Write description" /></div>)
+// }
 
 
-const App = () => {
-  const [forms, setForms] = useState([{ id: 1, description: '' }]);
+const Editor = () => {
+  const [content, setContent] = useState('');
+  console.log("🚀 ~ file: test.js:22 ~ Editor ~ content", content)
 
-  const handleClick = () => {
-    setForms([...forms, { id: forms.length + 1, description: '' }]);
-  };
-
-  const handleChange = (value, index) => {
-    const updatedForms = [...forms];
-    updatedForms[index].description = value;
-    setForms(updatedForms);
-  };
-
-  const handleRemove = index => {
-    setForms(forms.filter((form, i) => i !== index));
+  const handleChange = (value) => {
+    setContent(value);
   };
 
   return (
     <div>
-      {forms.map((form, index) => (
-        <div key={form.id}>
-          <ReactQuill
-            value={form.description}
-            onChange={(value) => handleChange(value, index)}
-          />
-          <button onClick={() => handleRemove(index)}>Remove</button>
-        </div>
-      ))}
-      <button onClick={handleClick}>Add Form</button>
+      <ReactQuill value={content} onChange={handleChange} />
     </div>
   );
 };
 
-export default App;
+export default Editor;

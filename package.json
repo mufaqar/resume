@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next-tools/dynamic": "^0.0.11",
     "@next/font": "13.1.6",
     "@reduxjs/toolkit": "^1.9.2",
     "eslint": "8.33.0",

@@ -5,12 +5,25 @@ import Modal from "react-modal";
 import { RxCross1 } from "react-icons/rx";
 import { SubTitle, Text } from "@/components/imports";
 import Image from "next/image";
+import dynamic from "next/dynamic";
+const ReactQuill = dynamic(import('react-quill'), { ssr: false })
+
+
+
+
 
 const Summery = ({ ai, RitchTextData, index }) => {
   const [modalIsOpen, setIsOpen] = React.useState(false);
   function openModal() {
     setIsOpen(true);
   }
+
+  const [content, setContent] = useState('');
+
+  const handleChange = (value) => {
+    setContent(value);
+    RitchTextData && RitchTextData(value);
+  };
 
   const theme = "snow";
   const modules = {
@@ -21,25 +34,26 @@ const Summery = ({ ai, RitchTextData, index }) => {
     ],
   };
 
-  const { quill, quillRef } = useQuill({ theme, modules });
-  const [text, setText] = useState();
+  // const { quill, quillRef } = useQuill({ theme, modules });
+  // const [text, setText] = useState();
 
-  React.useEffect(() => {
-    if (quill) {
-      quill.on("text-change", (delta, oldDelta, source) => {
-        setText(quill.root.innerHTML);
-        const content = quill.root.innerHTML;
-        const data = { content, index };
-        RitchTextData && RitchTextData(data);
-      });
-    }
-  }, [quill]);
+  // React.useEffect(() => {
+  //   if (quill) {
+  //     quill.on("text-change", (delta, oldDelta, source) => {
+  //       setText(quill.root.innerHTML);
+  //       const content = quill.root.innerHTML;
+  //       const data = { content, index };
+  //       
+  //     });
+  //   }
+  // }, [quill]);
 
   return (
     <>
       <div className="bg-[#EFF2F9] relative h-[236px]">
         <div style={{ width: "100%", height: 236 }}>
-          <div ref={quillRef} />
+          {/* <div ref={quillRef} /> */}
+          <ReactQuill theme={theme} modules={modules} value={content} onChange={handleChange} />
         </div>
         {ai && (
           <button
