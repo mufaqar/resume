@@ -27,6 +27,7 @@ const Summery = ({ ai, RitchTextData, index }) => {
 
 
   React.useEffect(() => {
+    if (typeof window !== "undefined") {
     if (quill) {
       quill.on("text-change", (delta, oldDelta, source) => {
         setText(quill.root.innerHTML);
@@ -35,6 +36,7 @@ const Summery = ({ ai, RitchTextData, index }) => {
         RitchTextData && RitchTextData(data)
       });
     }
+  }
   }, [quill]);
 
 
