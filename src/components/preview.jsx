@@ -1,8 +1,14 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import parse from "html-react-parser";
 
-export default function Preview() {
+export default function Preview({
+  EmploymentHistoryData,
+  EducationData,
+  SkillsData,
+  LanguagesData,
+  CertificationData
+}) {
   const PersonalDetailFields = useSelector(
     (state) => state.ResumeFormData.personalDetailState
   );
@@ -30,6 +36,19 @@ export default function Preview() {
     (state) => state.ResumeFormData.addMoreSectionState
   );
 
+  const storeDataState = useSelector(
+    (state) => state.ResumeFormData.storeDataState
+  );
+
+  const EmploymentHistoryFieldsData = storeDataState ? EmploymentHistoryFields[0] : EmploymentHistoryData
+  const EducationDataFieldsData = storeDataState ? EducationalFields[0] : EducationData
+  const SkillsDataFieldsData = storeDataState ? SkillFields[0] : SkillsData
+  const LanguageFieldsFieldsData = storeDataState ? LanguageFields[0] : LanguagesData
+  console.log("🚀 ~ file: preview.jsx:47 ~ LanguageFieldsFieldsData", LanguageFieldsFieldsData)
+  const CertificationFieldsData = storeDataState ? CertificationFields[0] : CertificationData
+
+
+
   return (
     <div className="bg-white p-3 md:p-6 flex gap-3">
       <div className="w-1/3">
@@ -51,7 +70,7 @@ export default function Preview() {
         <div className="mt-5">
           <h3 className="text-lg font-bold font-apple-sd">Skills</h3>
           <ul className="text-sm font-medium mt-2 space-y-2 font-apple-sd">
-            {SkillFields[0]?.map((skill, i) => {
+            {SkillsDataFieldsData?.map((skill, i) => {
               return (
                 <li className="capitalize" key={i}>
                   {skill?.Skill}
@@ -63,7 +82,7 @@ export default function Preview() {
         <div className="mt-5">
           <h3 className="text-lg font-bold font-apple-sd">Languages</h3>
           <ul className="text-sm font-medium mt-2 space-y-2 font-apple-sd">
-            {LanguageFields[0]?.map((lang, i) => {
+            {LanguageFieldsFieldsData?.map((lang, i) => {
               return (
                 <li className="capitalize" key={i}>
                   {lang?.Languages}
@@ -90,7 +109,7 @@ export default function Preview() {
           <h3 className="text-lg font-bold font-apple-sd">
             Employment History
           </h3>
-          {EmploymentHistoryFields[0]?.map((emp, i) => (
+          {EmploymentHistoryFieldsData?.map((emp, i) => (
             <div key={i}>
               <h4 className="text-sm font-bold mt-2 font-apple-sd">
                 {emp?.jobtitle}, {emp?.Employer}, {emp?.City}
@@ -107,7 +126,7 @@ export default function Preview() {
         <div className="mt-5">
           <h3 className="text-lg font-bold font-apple-sd">Education</h3>
           {
-            EducationalFields[0]?.map((edu,i)=>(
+            EducationDataFieldsData?.map((edu,i)=>(
              <div key={i}>
                 <h4 className="text-sm font-bold mt-2 font-apple-sd">
                   {edu?.Degree} {edu?.University}
@@ -123,7 +142,7 @@ export default function Preview() {
         <div className="mt-5">
           <h3 className="text-lg font-bold font-apple-sd">Certification</h3>
           {
-            CertificationFields[0]?.map((cert,i)=>(
+            CertificationFieldsData?.map((cert,i)=>(
                 <div key={i}>
                     <h4 className="text-sm font-bold mt-2 font-apple-sd">
                     {cert?.Title}

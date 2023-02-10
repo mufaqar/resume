@@ -5,7 +5,7 @@ import { AiOutlineDelete } from "react-icons/ai";
 import { useDispatch, useSelector } from "react-redux";
 import { HandleSkills } from "@/reducers/resume-data-slice/resume-data-slice";
 import { MdKeyboardArrowDown,MdKeyboardArrowUp } from "react-icons/md";
-const Skills = () => {
+const Skills = ({getData}) => {
   const [forms, setForms] = useState([
     {
       id: 1,
@@ -52,6 +52,8 @@ const Skills = () => {
   if (storeDataState) {
     dispatch(HandleSkills(forms));
   }
+
+  getData(forms)
 
   return (
     <>

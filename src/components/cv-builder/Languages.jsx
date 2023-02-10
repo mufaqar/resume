@@ -5,7 +5,7 @@ import { AiOutlineDelete } from "react-icons/ai";
 import { useDispatch, useSelector } from "react-redux";
 import { HandleLanguages } from "@/reducers/resume-data-slice/resume-data-slice";
 import { MdKeyboardArrowDown,MdKeyboardArrowUp } from "react-icons/md";
-const Languages = () => {
+const Languages = ({getData}) => {
   const [forms, setForms] = useState([
     {
       id: 1,
@@ -52,7 +52,7 @@ const Languages = () => {
   if (storeDataState) {
     dispatch(HandleLanguages(forms));
   }
-
+  getData(forms)
   return (
     <>
       <SubTitle className="mt-[42px]">Languages</SubTitle>

@@ -21,9 +21,30 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 
 const ResumeBuilderModule = (props) => {
+  const router = useRouter();
+  const dispatch = useDispatch();
+  const [EmploymentHistoryData, setEmploymentHistoryData] = useState();
+  const [EducationData, setEducationData] = useState();
+  const [SkillsData, setSkillsData] = useState();
+  const [LanguagesData, setLanguagesData] = useState();
+  const [CertificationData, setCertificationData] = useState();
 
-  const router = useRouter()
-  const dispatch = useDispatch()
+  const EmpDatafun = (props) => {
+    setEmploymentHistoryData(props);
+  };
+  const EduDatafun = (props) => {
+    setEducationData(props);
+  };
+  const skillDatafun = (props) => {
+    setSkillsData(props);
+  };
+  const LangDatafun = (props) => {
+    setLanguagesData(props);
+  };
+  const certDatafun = (props) => {
+    setCertificationData(props);
+  };
+  
   
 
   return (
@@ -35,17 +56,23 @@ const ResumeBuilderModule = (props) => {
           </h1>
           <SubTitle>Personal Details</SubTitle>
           <PersonalDetailsForm />
-          <EmploymentHistory />
-          <Education />
-          <Skills />
-          <Languages />
-          <Certification />
+          <EmploymentHistory getData={EmpDatafun} />
+          <Education getData={EduDatafun} />
+          <Skills getData={skillDatafun} />
+          <Languages getData={LangDatafun} />
+          <Certification getData={certDatafun}/>
           <ExtraCurricularActivities />
           <AddMoreSection />
         </section>
         <section>
           <div className={"image-container mt-6"}>
-          <Image src="/images/cv-temp-image-1.png" fill className={"image"} />
+            <Preview
+              EmploymentHistoryData={EmploymentHistoryData}
+              EducationData={EducationData}
+              SkillsData={SkillsData}
+              LanguagesData={LanguagesData}
+              CertificationData={CertificationData}
+            />
           </div>
           {/* select cv template design */}
           <div className="mt-10">
@@ -53,9 +80,9 @@ const ResumeBuilderModule = (props) => {
           </div>
           <div className="flex justify-center mt-20">
             <button
-              onClick={()=>{
-                dispatch(ChangeStoreDataState(true))
-                router.push('/cover-letter')
+              onClick={() => {
+                dispatch(ChangeStoreDataState(true));
+                router.push("/cover-letter");
               }}
               className="text-white bg-blue-700 hover:bg-blue-700  font-medium rounded-[4px] text-base px-7 py-4 mb-2"
             >

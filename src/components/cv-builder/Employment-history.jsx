@@ -6,7 +6,7 @@ import { MdKeyboardArrowDown,MdKeyboardArrowUp } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
 import { HandleEmploymentHistory } from "@/reducers/resume-data-slice/resume-data-slice";
 
-const EmploymentHistory = () => {
+const EmploymentHistory = ({getData}) => {
   const [forms, setForms] = useState([
     {
       id: 1,
@@ -40,6 +40,8 @@ const EmploymentHistory = () => {
     updatedForms[index][e.target.name] = e.target.value;
     setForms(updatedForms);
   };
+
+  getData(forms)
 
   const handleRemove = (index) => {
     setForms(forms.filter((form, i) => i !== index));

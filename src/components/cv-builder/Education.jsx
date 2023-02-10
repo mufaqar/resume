@@ -5,7 +5,7 @@ import { AiOutlineDelete } from "react-icons/ai";
 import { useDispatch, useSelector } from "react-redux";
 import { HandleEducation } from "@/reducers/resume-data-slice/resume-data-slice";
 import { MdKeyboardArrowDown,MdKeyboardArrowUp } from "react-icons/md";
-const Education = () => {
+const Education = ({getData}) => {
 
   const [forms, setForms] = useState([
     {
@@ -58,6 +58,7 @@ const Education = () => {
     dispatch(HandleEducation(forms));
   }
 
+  getData(forms)
 
   return (
     <>

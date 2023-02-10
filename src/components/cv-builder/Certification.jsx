@@ -5,7 +5,7 @@ import { AiOutlineDelete } from "react-icons/ai";
 import { useDispatch, useSelector } from "react-redux";
 import { HandleCertification } from "@/reducers/resume-data-slice/resume-data-slice";
 import { MdKeyboardArrowDown,MdKeyboardArrowUp } from "react-icons/md";
-const Certification = () => {
+const Certification = ({getData}) => {
   const [forms, setForms] = useState([
     {
       id: 1,
@@ -52,7 +52,7 @@ const Certification = () => {
   if (storeDataState) {
     dispatch(HandleCertification(forms));
   }
-
+  getData(forms)
   return (
     <>
       <SubTitle className="mt-[42px]">Certification</SubTitle>
