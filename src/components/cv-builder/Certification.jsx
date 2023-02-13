@@ -114,7 +114,7 @@ const Certification = ({getData}) => {
                         <div>
                           <Label>Date</Label>
                           <input
-                            type="text"
+                            type="date"
                             id="Date"
                             className="input"
                             placeholder="MM / YYYY"

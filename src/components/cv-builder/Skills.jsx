@@ -89,7 +89,7 @@ const Skills = ({getData}) => {
 
             <AiOutlineDelete
             size={55}
-            className="cursor-pointer mt-1 text-gray-400 absolute -right-9 pl-6 pt-4 pb-4 group-hover:block hidden top-0 transform"
+            className="cursor-pointer mt-2 text-gray-400 absolute -right-9 pl-6 pt-4 pb-4 group-hover:block hidden top-0 transform"
             onClick={() => handleRemove(index)}
           />
           </button>

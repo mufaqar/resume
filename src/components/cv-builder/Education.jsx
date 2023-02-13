@@ -149,7 +149,7 @@ const Education = ({ getData }) => {
                         <div>
                           <Label>Start & End Date</Label>
                           <input
-                            type="text"
+                            type="date"
                             id="StartDate"
                             className="input"
                             placeholder=""
@@ -161,7 +161,7 @@ const Education = ({ getData }) => {
                         </div>
                         <div>
                           <input
-                            type="text"
+                            type="date"
                             id="EndDate"
                             className="input"
                             placeholder=""

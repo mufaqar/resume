@@ -70,6 +70,7 @@ const EmploymentHistory = ({getData}) => {
     dispatch(HandleEmploymentHistory(forms));
   }
 
+
   return (
     <>
       <SubTitle className="mt-[42px]">Employment History</SubTitle>
@@ -142,10 +143,11 @@ const EmploymentHistory = ({getData}) => {
                         />
                       </div>
                       <div className="grid grid-cols-2 gap-3 items-end">
-                        <div>
+
+                      <div>
                           <Label>Start & End Date</Label>
                           <input
-                            type="text"
+                            type="date"
                             id="StartDate"
                             className="input"
                             placeholder="MM / YYYY"
@@ -157,7 +159,7 @@ const EmploymentHistory = ({getData}) => {
                         </div>
                         <div>
                           <input
-                            type="text"
+                            type="date"
                             id="EndDate"
                             className="input"
                             placeholder="MM / YYYY"
