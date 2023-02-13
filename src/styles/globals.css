@@ -117,3 +117,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
           height: 100% !important;
      }
 }
+
+.react-datepicker__month{
+     padding: .5rem !important;
+}
+.react-datepicker__month .react-datepicker__month-text, .react-datepicker__month .react-datepicker__quarter-text{
+     padding:8px;
+     border-radius: 16px;
+}

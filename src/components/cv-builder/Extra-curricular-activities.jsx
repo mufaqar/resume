@@ -131,6 +131,7 @@ const ExtraCurricularActivities = () => {
                           name="StartDate"
                           value={form.StartDate}
                           onChange={(e) => handleChange(e, index)}
+                          min='1980-01-01' max='2040-01-01'
                         />
                       </div>
                       <div>
@@ -143,6 +144,7 @@ const ExtraCurricularActivities = () => {
                           name="EndDate"
                           value={form.EndDate}
                           onChange={(e) => handleChange(e, index)}
+                          min='1980-01-01' max='2040-01-01'
                         />
                       </div>
                     </div>

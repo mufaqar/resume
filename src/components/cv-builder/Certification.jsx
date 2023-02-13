@@ -122,6 +122,7 @@ const Certification = ({getData}) => {
                             name="Date"
                             value={form.Date}
                             onChange={(e) => handleChange(e, index)}
+                            min='1980-01-01' max='2040-01-01'
                           />
                         </div>
                       </div>
