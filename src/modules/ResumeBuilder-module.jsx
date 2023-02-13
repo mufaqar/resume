@@ -63,6 +63,7 @@ const ResumeBuilderModule = (props) => {
           <Certification getData={certDatafun}/>
           <ExtraCurricularActivities />
           <AddMoreSection />
+          
         </section>
         <section>
           <div className={"image-container mt-6"}>
