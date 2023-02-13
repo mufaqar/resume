@@ -67,9 +67,11 @@ const Skills = ({getData}) => {
       {forms.map((form, index) => (
         <div id="accordion-collapse" className="mt-4" data-accordion="collapse" key={index}>
           <div className="mt-4 flex group gap-4">
-            <div className="w-full"><button
+            <div className="w-full">
+           
+            <button
             type="button"
-            class={`flex items-center justify-between w-full px-5 py-4  font-medium text-left text-gray-500 border border-gray-200 ${
+            class={`flex group relative items-center justify-between w-full px-5 py-4  font-medium text-left text-gray-500 border border-gray-200 ${
               empTab === index ? "border-b-0" : ""
             }`}
             onClick={() => HandleEmpTab(index)}
@@ -84,7 +86,16 @@ const Skills = ({getData}) => {
             {
               empTab === index ? <MdKeyboardArrowUp size={26}/> : <MdKeyboardArrowDown size={26}/>
             }
+
+            <AiOutlineDelete
+            size={55}
+            className="cursor-pointer mt-1 text-gray-400 absolute -right-9 pl-6 pt-4 pb-4 group-hover:block hidden top-0 transform"
+            onClick={() => handleRemove(index)}
+          />
           </button>
+         
+            
+        
 
           <div
             id="accordion-collapse-body-1"
@@ -126,11 +137,7 @@ const Skills = ({getData}) => {
             </div>
           </div>
           </div>
-          <AiOutlineDelete
-              size={20}
-              className="cursor-pointer hidden group-hover:block mt-7"
-              onClick={() => handleRemove(index)}
-            />
+          
           </div>
         </div>
       ))}

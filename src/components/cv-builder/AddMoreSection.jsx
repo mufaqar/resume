@@ -78,6 +78,7 @@ const AddMoreSection = () => {
           >
             <div className="mt-4 group flex gap-4">
               <div className="w-full">
+                <div className="group relative">
                 <button
                   type="button"
                   class={`flex items-center justify-between w-full px-5 py-4  font-medium text-left text-gray-500 border border-gray-200 ${
@@ -105,7 +106,11 @@ const AddMoreSection = () => {
                     empTab === index ? <MdKeyboardArrowUp size={26}/> : <MdKeyboardArrowDown size={26}/>
                   }
                 </button>
-
+                <AiOutlineDelete
+                size={55}
+                className="cursor-pointer mt-3 text-gray-400 absolute -right-9 pl-6 pt-4 pb-4 group-hover:block hidden top-0 transform"
+                onClick={() => handleRemove(index)}
+              /></div>
                 <div
                   id="accordion-collapse-body-1"
                   class={empTab === index ? "block" : "hidden"}
@@ -184,11 +189,6 @@ const AddMoreSection = () => {
                   </div>
                 </div>
               </div>
-              <AiOutlineDelete
-                size={20}
-                className="cursor-pointer hidden group-hover:block mt-7"
-                onClick={() => handleRemove(index)}
-              />
             </div>
           </div>
         ))}

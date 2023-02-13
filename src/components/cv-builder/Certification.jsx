@@ -66,6 +66,7 @@ const Certification = ({getData}) => {
         >
           <div className="mt-4 flex group gap-4">
             <div className="w-full">
+              <div className="relative group">
               <button
                 type="button"
                 className={`flex items-center justify-between w-full px-5 py-4  font-medium text-left text-gray-500 border border-gray-200 ${
@@ -83,6 +84,12 @@ const Certification = ({getData}) => {
                   empTab === index ? <MdKeyboardArrowUp size={26}/> : <MdKeyboardArrowDown size={26}/>
                 }
               </button>
+              <AiOutlineDelete
+            size={55}
+            className="cursor-pointer mt-3 text-gray-400 absolute -right-9 pl-6 pt-4 pb-4 group-hover:block hidden top-0 transform"
+            onClick={() => handleRemove(index)}
+          />
+              </div>
               <div
                 id="accordion-collapse-body-1"
                 class={empTab === index ? "block" : "hidden"}
@@ -123,11 +130,7 @@ const Certification = ({getData}) => {
                 </div>
               </div>
             </div>
-            <AiOutlineDelete
-                size={20}
-                className="cursor-pointer hidden group-hover:block mt-7"
-                onClick={() => handleRemove(index)}
-              />
+            
           </div>
         </div>
       ))}
